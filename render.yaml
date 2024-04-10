@@ -12,11 +12,11 @@ services:
     buildCommand: "./build.sh"
     startCommand: "python -m gunicorn christ_fullness.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
-      - key: DATABASE_URL
+      - key: postgres://cfmdb_user:NoLhS47zerue3RlFPgMpyiuKShF06QkB@dpg-cob8pu21hbls73aojth0-a.oregon-postgres.render.com/cfmdb
         fromDatabase:
           name: cfmdb
           property: connectionString
-      - key: SECRET_KEY
+      - key: django-insecure-alh17w4is(*&na7d5o*c09!wl%d^lhvuyxol!7klc2y^6@k6$&
         generateValue: true
       - key: WEB_CONCURRENCY
         value: 4
