@@ -1,5 +1,5 @@
 databases:
-  - name: cfmDB
+  - name: cfmdb
     plan: free
     databaseName: cfmdb
     user: cfmdb_user
