@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<div class="founders-about">
+    <div id="founders-about-close" class="founders-about-close">x</div>
+    <div class="about-card">
+        
+        <div class="ab-desc">
+            <span class="ceo-name">Terms & Conditions</span>
+            <span class="ceo-label">cfm</span>
+            <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis.</span>
+            
+        </div>
+    </div>
+</div>
+
+
+<section class="solutions-page hidden">
+      <div class="child-1 sol1">
+          
+          <div class="sol-text">
+              <!-- <h2>The Hub for business</h2> -->
+              <h1>
+                {% if getInvolved %}{{getInvolved.name}}{% else %}Page Title{% endif %}
+              </h1>
+              <div class="sol-text-link">
+                  <a href="#profile-text">Learn more</a>
+                  <a href="{% url 'register' %}">Get Started</a>
+              </div>
+          </div>
+          
+      </div>
+      
+      <section id="homepage-services" class="homepage-services">
+
+        <div class="service-cards">
+          <div>
+            <img class="icon-1" src="{{getInvolved.imageURL1}}" alt="">
+            
+            <h1 class="text-wrapper">{% if getInvolved %}{{getInvolved.department_1}}{% else %}Department Title{% endif %}</h1>
+              
+              <p>{% if getInvolved %}{{getInvolved.department_1_description}}{% else %}Department description{% endif %}</p>
+            
+          </div>
+          
+          <div>
+            <img class="icon-1" src="{{getInvolved.imageURL2}}" alt="">
+            
+            <h1 class="text-wrapper">{% if getInvolved %}{{getInvolved.department_2}}{% else %}Department Title{% endif %}</h1>
+              
+              <p>{% if getInvolved %}{{getInvolved.department_2_description}}{% else %}Department description{% endif %}</p>
+            
+            
+          </div>
+
+          <div>
+              <img class="icon-1" src="{{getInvolved.imageURL3}}" alt="">
+            
+              <h1 class="text-wrapper">{% if getInvolved %}{{getInvolved.department_3}}{% else %}Department Title{% endif %}</h1>
+              
+              <p>{% if getInvolved %}{{getInvolved.department_3_description}}{% else %}Department description{% endif %}</p>
+            
+            
+          </div>
+
+          
+        </div>
+      </section>
+      
+      <section id="profile-text" class="profile-text">
+          <h1>More About {% if getInvolved %}{{getInvolved.name}}{% else %}Page Title{% endif %}</h1>
+          <div>
+            {% if getInvolved %}{{getInvolved.page_description}}{% else %}Page description..{% endif %}
+          </div>
+      </section>
+
+  
+
+</section>
+
+{% endblock %}

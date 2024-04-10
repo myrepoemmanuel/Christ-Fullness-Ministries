@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>CFM</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/cfm_logo.png' %}">
+</head>
+
+<body>
+    <div id="loader-parent" class="loader-parent">
+        <div class="loader"></div>
+        <h4>Welcome</h4>
+    </div>
+    <header>
+        <div class="main_nav">
+            <a class="logo" href="{% url 'home' %}">
+              <img src="{% static 'assets/img/cfm_logo.png' %}" alt="">
+              <p class="logo-text">
+                Attaining the full<br>
+                measure of Christ.
+              </p>
+            </a>
+            
+            <a class="nav-links">
+                <span class="styler-bg"></span>
+                Events
+            </a>
+
+            <a class="nav-links">
+                <span class="styler-bg"></span>
+                Sermons
+            </a>
+
+            <div class="nav-links">
+                <span class="styler-bg"></span>
+                <span class="nav-links-solution">Get Involved <p class="carrat">+</p></span>
+                <img class="menu_triangle" src="{% static 'assets/img/triangle.png' %}" alt="">
+                <p class="sub_menu">
+
+                    <a href="{% url 'get_involved' 'missions_department' %}" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/inventory-management.png' %}" alt="">
+                        <strong>Missions Department</strong>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, eligendi odio! Praesentium soluta 
+                    </a>
+    
+                    <a href="{% url 'get_involved' 'childrens_ministry' %}" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/distribution.png' %}" alt="">
+                        <strong>Childrens Ministry</strong>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, eligendi
+                    </a>
+    
+                    <a href="{% url 'get_involved' 'youth_ministry' %}" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/trolley.png' %}" alt="">
+                        <strong>Youth Ministry</strong>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, eligendi
+                    </a>
+    
+                    <a href="{% url 'get_involved' 'evangelism_team' %}" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/consolidate.png' %}" alt="">
+                        <strong>Evangelism Team</strong>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, eligendi
+                    </a>
+    
+                    <a href="{% url 'get_involved' 'discipleship_classes' %}" style="border: none;" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/consultation.png' %}" alt="">
+                        <strong>Discipleship Classes</strong>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, eligendi
+                    </a>
+                </p>
+            </div>
+
+            <a class="nav-links">
+                <span class="styler-bg"></span>
+                Gallery
+            </a>
+            <a class="nav-links how_works">
+                <span class="styler-bg"></span>
+                Testimonies
+            </a>
+            
+            <a class="nav-links" href="{% url 'about' %}">
+                <span class="styler-bg"></span>About Us
+            </a>
+
+            <a class="login-btn" href="{% url 'signin' %}">Give Online</a>
+
+    
+            <div id="myNav" class="overlay">
+    
+              <!-- Button to close the overlay navigation -->
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+              <!-- Overlay content -->
+              <div class="overlay-content">
+    
+                  <a href="{% url 'home' %}">Home</a>
+                  
+                  <a href="{% url 'about' %}">About Us</a>
+    
+                  <a class="overlay-solution">Solution +</a>
+                  <div class="overlay-sol-menu ">
+                    <a href="{% url 'get_involved' 'missions_department' %}">Missions Department</a>
+                    <a href="{% url 'get_involved' 'childrens_ministry' %}">Childrens Ministry</a>
+                    <a href="{% url 'get_involved' 'youth_ministry' %}">Youth Ministry</a>
+                    <a href="{% url 'get_involved' 'evangelism_team' %}">Evangelism Team</a>
+                    <a href="{% url 'get_involved' 'discipleship_classes' %}">Discipleship Classes</a>
+                  </div>
+                  
+                  <a href="{% url 'register' %}">Give</a>
+                  
+        
+    
+              </div>
+    
+          </div>
+                  
+          <span class="menu hide" onclick="openNav()">&#9776; </span>
+        </div>
+    </header>
+
+    {% block content %}
+        
+        
+
+    {% endblock %}
+
+    <section id="footer" class="footer">
+          
+        <div class="child-1">
+          <h1>Christ Fullness Ministries</h1>
+          <h4>
+            Attaining The Full Measure of our<br>Lord Jesus Christ
+        </h4>
+          
+          <p>All rights Reserved © by CFM</p>
+    
+        </div>
+    
+        <div class="child-2">
+    
+          <div class="other-links">
+            <h1>Ministries</h1>
+            <a class="footer-links">Giving</a>
+            <a class="footer-links">Sermons</a>
+            <a class="footer-links">Contact Us</a>
+            
+          </div>
+    
+          <div class="services">
+    
+            <h1>Our Services</h1>
+            <p class="heading">Sunday Services</p>
+            <p>1st Service - 8:00 AM - 10:45 AM</p>
+            <p>2nd Service - 11:00 AM - 1:00 PM</p>
+            <p class="heading">Wednesday Service</p>
+            <p>5:30 PM - 7:30 PM</p>
+    
+      
+          </div>
+    
+          <div class="Contact-Info">
+    
+            <h1>Contact Info</h1>
+            <p>Church Road (off Magadi Road, Ongata Rongai) Kenya</p>
+            <p>(+254) 700 264 927</p>
+            <a href="mailto:mail@christfm.org">mail@christfm.org</a>
+          </div>
+    
+        </div>
+    
+    </section>
+
+    <script src="{% static 'assets/js/thehub.js' %}"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+

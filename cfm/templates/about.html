@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+    <div class="founders-about modal-about">
+        <div id="founders-about-close" class="founders-about-close">x</div>
+        <div class="about-card">
+            <div class="ab-img">
+                <img src="{% static 'assets/img/about.png' %}" alt="">
+            </div>
+            <div class="ab-desc">
+                <span class="ceo-name">S.kioko</span>
+                <span class="ceo-label">Senior Pastor </span>
+                <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis.</span>
+                
+            </div>
+        </div>
+    </div>
+    <section class="about-us hidden">
+        
+        <div class="child-1">
+            <div class="about-us-title">
+                <h1>About Us</h1>
+            </div>
+
+            <div class="company-desc">
+                <!-- <h1>What is The Hub</h1> -->
+                <p>
+                    {% if about_text %}
+                        {{about_text}} should be 654 in length
+                    {% else %}
+                        <strong>The about us description appears here.</strong><br><br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint assumenda obcaecati sed saepe, officia et repellendus 
+                        numquam exercitationem velit nulla in repellat voluptatibus eos error sit distinctio, perferendis dolorum? Enim.
+
+                    {% endif %}
+                </p>
+                <div>
+                    <a href="{% url 'home' %}">Explore</a>
+                    <a href="{% url 'register' %}">Get in Touch</a>
+                </div>
+            </div>
+
+            <div class="founders">
+                <h1>Our Church Leaders</h1>
+                <div class="executives">
+
+                    {% for leader in leaders %}
+                        <div class="flip-card flip-card-bod">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="{{leader.imageURL}}" alt="Cfm Leader image">
+                                </div>
+                                <div class="flip-card-back">
+                                    <span class="ceo-name">{{leader.name}}</span>
+                                    <span class="ceo-label">{{leader.position}}</span>
+                                    <span class="ceo-text">{{leader.description | slice:40}}<p style="color: blue;">Read more</p></span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="child-2">
+            <div class="advantages">
+                <!-- <h1>WHY CHOOSE US</h1> -->
+                <h4>
+                    <p>Worship With Us At</p>
+                    <p style="color: #ed3337;">Christ Fullness Ministries</p>
+                    <p>Every Sunday and Wednesday</p>
+                </h4>
+            </div>
+            <div class="v-text">
+                <div class="vision">
+                    <h1>Vision</h1>
+                    <p>
+                        {% if about %}
+                            {{about.vision}} should be 654 in length
+                        {% else %}
+                            <strong>The vision appears here.</strong><br><br>
+                        {% endif %}
+                    </p>
+                </div>
+                
+                <div class="mission">
+                    <h1>Mission</h1>
+                    <p>
+                        {% if about %}
+                            {{about.vision}} should be 654 in length
+                        {% else %}
+                            <strong>The vision appears here.</strong><br><br>
+                        {% endif %}
+                    </p>
+                </div>
+
+                <div class="core-values">
+                    <h1>Core Values</h1>
+                    <p>
+
+                        <span>
+                            <img src="{% if about %}{{about.imgURL1}}{% else %}{% static 'assets/img/maturity.png' %}{% endif %}" alt="">
+                            {% if about %}{{about.core_value_1}}{% else %}Maturity{% endif %}
+                        </span>
+
+                        <span>
+                            <img src="{% if about %}{{about.imgURL2}}{% else %}{% static 'assets/img/transform.png' %}{% endif %}" alt="">
+                            {% if about %}{{about.core_value_1}}{% else %}Transformation{% endif %}
+                        </span>
+
+                        <span>
+                            <img src="{% if about %}{{about.imgURL3}}{% else %}{% static 'assets/img/ministry.png' %}{% endif %}" alt="">
+                            {% if about %}{{about.core_value_1}}{% else %}Ministry{% endif %}
+                        </span>
+
+                        <span>
+                            <img src="{% if about %}{{about.imgURL4}}{% else %}{% static 'assets/img/integrity.png' %}{% endif %}" alt="">
+                            {% if about %}{{about.core_value_1}}{% else %}Integrity{% endif %}
+                        </span>
+                    </p>
+                </div>
+
+                
+                
+            </div>
+        </div>
+
+        <div class="philosophy">
+            <h1>
+                Statement of Faith
+                <strong>One Eternal God. One Saviour. Holy Spirit</strong>
+
+            </h1>
+            <div class="philosophy-box">
+                <p>
+                    <strong>One Eternal God</strong>
+                    We believe in the one eternal God and in the Trinity of the Father, 
+                    Son and Holy Spirit, the Creator and Lord of the world, who governs 
+                     things according to the purpose of His will, calling out of the world 
+                     a people for himself and sending them back into the world to be His 
+                     servants and witnesses for the extension of His Kingdom, the building 
+                     of Christ's church to the glory of His name.
+                    <br><br>
+                    <strong>One Saviour</strong>
+                    We believe in the one Saviour, Jesus Christ Himself being the only God-man, 
+                    who died for the sins of mankind and was raised from the dead according to 
+                    the scriptures; the only ransom for sinners and mediator between God and man; 
+                    who is exalted above every other name as Saviour of the world; who offers 
+                    forgiveness of sins and the liberating gift of the Spirit to all who repent, 
+                    believe and come to him personally; and those who reject Him, by so doing, 
+                    also reject the joy of salvation and condemn themselves to eternal separation 
+                    from God.
+
+                    <br><br>
+                    <strong>Holy Spirit</strong>
+                    We believe in the Holy Spirit, sent by God the Father to bear witness 
+                    to his Son, whose power and works among men lead to the conviction of sin, 
+                    faith in Christ, new birth and Christian growth; and speaking through Scriptures 
+                    illumines the minds of God's people in every culture to perceive the truth and disclose 
+                    to the whole church of the wisdom of God.                    
+                    
+                </p>
+
+
+            </div>
+            
+        </div>
+
+    </section>
+
+
+{% endblock %}

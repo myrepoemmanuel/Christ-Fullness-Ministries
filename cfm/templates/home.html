@@ -1,0 +1,553 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+  
+  <div class="founders-about">
+    <div id="founders-about-close" class="founders-about-close">x</div>
+    <div class="about-card">
+        
+        <div class="ab-desc">
+            <span class="ceo-name">Terms & Conditions</span>
+            <span class="ceo-label">cfm</span>
+            <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis.</span>
+            
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="service-video">
+    <div class="service-video-close">x</div>
+    <div class="video-card">
+        <div class="ab-img">
+          <iframe src="https://www.youtube.com/embed/Lpp9bHtPAN0">
+          </iframe>
+          <video style="display: none;" controls>
+            <source src="{% static 'assets/videos/thl.mp4' %}" type="video/mp4">
+          Your browser does not support the video tag.
+          </video> 
+        </div>
+    </div>
+  </div> 
+
+  <section class="all-sections hidden">
+
+      <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            {% for slider in homeSliders %}
+            <div class="swiper-slide">
+              <div class="slider-text">
+                <h1>
+                    {{slider.slider_title}}
+                </h1>
+                <h3>{{slider.slider_description}}</h3>
+                <a href="{% url slider.slider_link %}">{{slider.slider_link}}</a>  
+              </div>
+              <img src="{{slider.imageURL}}" alt="">
+              
+              
+            </div>
+            {% endfor %}
+
+            
+            
+          </div>
+          
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+          </div>
+      </div>
+
+      <section id="homepage-services" class="homepage-services">
+        <h1>Social Events</h1>
+
+        <div class="service-cards">
+          <div>
+            <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+            
+            <h1 class="text-wrapper">Church Mission</h1>
+            <p class="desc-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit
+            </p>
+          </div>
+          
+          <div>
+            <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+            
+            <h1 class="text-wrapper">Outreach</h1>
+            <p class="desc-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit
+            </p>
+            
+          </div>
+
+          <div>
+            <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+            
+            <h1 class="text-wrapper">Maturity Classes</h1>
+            <p class="desc-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit
+            </p>
+            
+          </div>
+        </div>
+      </section>
+
+      <section id="location" class="location">
+        <div class="location-container">
+          
+          <div class="location-text">
+
+            <div class="child-1">
+              <img class="img-1" src="{% static 'assets/img/cfm1.png' %}" alt="">
+          
+
+            </div>
+
+            
+
+          </div>
+          <div class="location-image">
+            <div class="child-1">
+              <div>
+                  <h1>ABOUT US</h1>
+                
+              </div>
+              <h6>
+                Molding believers, influencing the world 
+              </h6>
+              
+              
+            </div>
+            <div class="child-2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
+              minus corporis iusto odio laboriosam vitae reprehenderit 
+              doloremque officia optio placeat, dolores et.Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
+              minus corporis iusto odio laboriosam vitae reprehenderit 
+              doloremque officia optio placeat, dolores et. <br><br>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
+              minus corporis iusto odio laboriosam vitae reprehenderit 
+              doloremque officia optio placeat, dolores et.Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
+              minus corporis iusto odio laboriosam vitae reprehenderit 
+              doloremque officia optio placeat, dolores et. <br> <br>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
+              minus corporis iusto odio laboriosam vitae reprehenderit 
+              doloremque officia optio placeat, dolores et.
+            </div>
+            <div class=" child-4">
+
+              <a href="{% url 'about' %}" class="btn btn-base">Read More</a>
+
+            </div>
+
+          </div>
+          
+        </div>
+
+
+
+      </section>
+
+
+      <section id="our-sermons" class="our-sermons">
+
+
+        <div class="our-sermons-cards-container">
+          <div class="our-sermons-card-header">
+            <div class="child-1">
+              <h4>
+                  Our Sermons
+              </h4>
+              
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maio.
+            </p>
+          </div>
+
+          <div class="service-cards">
+
+            <div class="child-1">
+
+              <span class="card-image" style="background: rgb(124, 119, 119);">
+                <img class="video_tag" src="{% static 'assets/img/play-button.png' %}" alt="">
+                <img class="host-img" style="width: 85%; height: 80%;" data-videoLink="video1-local" src="{% static 'assets/img/thl-home-logo.png' %}" alt="">
+              </span>
+            
+              
+            </div>
+
+            <div class="child-2">
+
+              <span class="card-image">
+                <img class="video_tag" src="{% static 'assets/img/play-button.png' %}" alt="">
+                <img class="host-img" data-videoLink="video2-online" src="{% static 'assets/img/two-men-in-a-warehouse.jpg' %}" alt="">
+              </span>
+            
+              
+            </div>
+
+            <div class="child-3">
+              
+              <span class="card-image">
+                <img class="video_tag" src="{% static 'assets/img/play-button.png' %}" alt="">
+                <img class="host-img" data-videoLink="video3-online" src="{% static 'assets/img/empty-warehouse.jpg' %}" alt="">
+              </span>
+              
+              
+            </div>
+
+
+            
+          </div>
+
+        </div>
+
+        
+      </section>
+
+      <section id="reach-out" class="reach-out">
+        
+        <div class="reach-out-parent">
+          <h4>
+              Email Updates
+          </h4>
+
+          <img class="hider-dark"  src="{% static 'assets/img/background-02.jpg' %}" alt="">
+
+          
+
+          <div class="child-2">
+            <div class="sect-1">
+              <h5>Get notified on upcoming events <br> and releases.</h5>
+            </div>
+          
+            <form action="{% url 'home' %}" method="post">
+              {% csrf_token %}
+              <div>
+                <input name="user_name" placeholder="Your Name" type="text">
+              </div>
+              <div>
+                <input name="email" placeholder="Your Email" type="text">
+              </div>
+              
+              <div>
+                <input type="submit" class="reach-out-btn form-btn" value="SUBSCRIBE">
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="testimonials" class="testimonials">
+        <div class="testimonials-header">
+          <img class="Quote-icon" src="{% static 'assets/img/quote-icon.png' %}" alt="">
+          <div>
+            <h5>Testimonies</h5>
+          </div>
+        </div>
+        
+        <div class="swiper swiper-testimonial mySwiper-testimonial">
+
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide swiper-slide-testimonial">
+              <div class="testimony_img"></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur temporibus eius deleniti, 
+                voluptatibus id alias beatae sunt earum corporis esse illum reprehenderit. Dicta fugit laudantium
+              </p>
+              <div class="test-card-footer">
+                
+                <span>
+                  <h5>
+                    Patricia Utiyah<br>
+                    
+                  </h5>
+                </span>
+              </div>
+            </div>
+
+            <div class="swiper-slide swiper-slide-testimonial">
+              <div class="testimony_img"></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur temporibus eius deleniti, 
+                voluptatibus id alias beatae sunt earum corporis esse illum reprehenderit. Dicta fugit laudantium 
+              </p>
+              <div class="test-card-footer">
+                
+                <span>
+                  <h5>
+                    Emmanuel Kioko<br>
+                    
+                  </h5>
+                </span>
+              </div>
+            </div>
+
+            <div class="swiper-slide swiper-slide-testimonial">
+              <div class="testimony_img"></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur temporibus eius deleniti, 
+                voluptatibus id alias beatae sunt earum corporis esse illum reprehenderit. Dicta fugit laudantium              </p>
+              <div class="test-card-footer">
+                
+                <span>
+                  <h5>
+                    Elijah Praise<br>
+                  </h5>
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        
+        <div class="swiper-pagination-testimonial"></div>
+
+        
+      </section>
+
+      <section class="faq-section">
+        <h1 class="faq-header">CFM Gallery</h1>
+
+        <div class="faq-groups">
+          <p class="faq-group-item Services active-cat">Services</p>
+          <p class="faq-group-item Baptism">Baptism</p>
+          <p class="faq-group-item Construction">Construction</p>
+          <p class="faq-group-item Celebrations">Celebrations</p>
+          <p class="faq-group-item Discipleship">Discipleship</p>
+        </div>
+
+        <div class="gallery-box">
+          <div id="Services" class="faq-content show active-faq">
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+            </div>
+            
+          </div>
+
+          <div id="Baptism" class="faq-content hide">
+            <div class="cards">
+              <img class="card" alt="church Baptism images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church Baptism images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church Baptism images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+            </div>
+          </div>
+
+          <div id="Construction" class="faq-content hide">
+            <div class="cards">
+              <img class="card" alt="church Construction images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church Construction images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church Construction images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+            </div>
+          </div>
+
+          <div id="Celebrations" class="faq-content hide">
+            <div class="cards">
+              <img class="card" alt="church Celebrations images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church Celebrations images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church Celebrations images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+            </div>
+          </div>
+
+          <div id="Discipleship" class="faq-content hide">
+            <div class="cards">
+              <img class="card" alt="church discipleship images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church discipleship images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church discipleship images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+            </div>
+
+            <div class="cards">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm3.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm1.png' %}">
+              <img class="card" alt="church service images" src="{% static 'assets/img/cfm2.png' %}">
+            </div>
+            
+          </div>
+        </div>
+
+        
+      </section>
+
+  </section>
+
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        loop:true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress);
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+          }
+        }
+      });
+  </script>
+  <!-- testimonial slider -->
+  <script>
+    var swiper2 = new Swiper(".mySwiper-testimonial", {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      loop: true,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination-testimonial",
+        clickable: true,
+      },
+    });
+  </script>
+{% endblock %}

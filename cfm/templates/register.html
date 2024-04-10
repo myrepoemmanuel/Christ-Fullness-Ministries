@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+  <div id="works-parent" class="works-parent">
+    <div id="hiw-close" class="hiw-close">x</div>
+    <section class="homepage-services hiw-services">
+        <h1>How It Works</h1>
+
+        <div class="service-cards">
+          <div>
+            <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+            
+            <h1 class="text-wrapper">Connect</h1>
+            <p class="desc-text">
+              Connect your store and send us your inventory
+            </p>
+          </div>
+          
+          <div>
+            <img class="icon-1" src="{% static 'assets/img/management.png' %}" alt="">
+            
+            <h1 class="text-wrapper">Store</h1>
+            <p class="desc-text">
+              Your inventory is categorized and securely stored 
+            </p>
+            
+          </div>
+
+          <div>
+            <img class="icon-1" src="{% static 'assets/img/shipto.png' %}" alt="">
+            
+            <h1 class="text-wrapper">Ship</h1>
+            <p class="desc-text">
+              Once a customer places an order, we Pick, Pack & Ship
+            </p>
+            
+          </div>
+        </div>
+    </section>
+  </div>
+  
+  <div class="founders-about">
+    <div id="founders-about-close" class="founders-about-close">x</div>
+    <div class="about-card">
+        
+        <div class="ab-desc">
+            <span class="ceo-name">Terms & Conditions</span>
+            <span class="ceo-label">The Hub</span>
+            <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis.</span>
+            
+        </div>
+    </div>
+  </div>
+    
+  
+
+    <section class="login-page register-page hidden">
+        <div class="child-1">
+            <img src="{% static 'assets/img/truck-factory.png' %}" alt="">
+        </div>
+
+        <div class="child-2">
+            <form action="{% url 'register' %}" method="post">
+              {% csrf_token %}
+
+                <h1>Welcome</h1>
+
+                <div class="login-inputs">
+                    <label for="username">First Name</label>
+                    <input type="text" name="firstname" placeholder="First Name" id="username">
+                </div>
+                <div class="login-inputs">
+                    <label for="username">Last Name</label>
+                    <input type="text" name="lastname" placeholder="Last Name" id="lastname">
+                </div>
+                <div class="login-inputs">
+                    <label for="username">Email</label>
+                    <input type="text" name="email" placeholder="Email" id="email">
+                </div>
+
+                <div class="login-inputs">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" placeholder="Enter password" id="password">
+                </div>
+                <div>
+                    <button type="submit">Register</button>
+                </div>
+
+                <div class="login-register-btn">
+                    <a href="{% url 'signin' %}">Already Have an Account <span>Sign In</span></a>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    
+{% endblock %}
