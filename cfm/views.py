@@ -37,7 +37,7 @@ def home(request):
                 print(f"Error sending email: {e}")
 
     homeSliders = HomepageSliders.objects.all()
-    print(homeSliders.values())
+    # print(homeSliders.values())
 
     context = {
         'homeSliders': homeSliders
