@@ -46,7 +46,9 @@
                 <h3>{{slider.slider_description}}</h3>
                 <a href="{% url slider.slider_link %}">{{slider.slider_link}}</a>  
               </div>
-              <img src="{{slider.imageURL}}" alt="">
+              <img class="slider-img" src="{{slider.imageURL}}" alt="">
+              <img class="slider-hider" src="{% static 'assets/img/hider-dark1.png' %}" alt="">
+
               
               
             </div>
@@ -508,7 +510,7 @@
 
   
 
-  <!-- <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script> -->
+  <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <script>
