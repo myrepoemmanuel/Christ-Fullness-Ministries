@@ -10,6 +10,10 @@ class HomepageSliders(models.Model):
     
     def __str__(self):
         return self.slider_title
+    
+    def save(self, *args, **kwargs):
+        print(f"this is image url: {self.slider_image.url}")
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'Homepage Sliders'
@@ -21,6 +25,8 @@ class HomepageSliders(models.Model):
         except:
             url = ''
         return url
+    
+    
 
 
 

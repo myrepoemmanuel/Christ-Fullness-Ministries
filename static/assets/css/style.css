@@ -628,7 +628,7 @@ section{
 /* slider css */
 
 .swiper {
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 120px);
     max-height: 80vh;
 }
@@ -643,6 +643,7 @@ section{
     font-size: 28px;
     background: #ed3337;
     height: 100%;
+    display: grid;
     
 }
 
@@ -650,13 +651,22 @@ section{
 .swiper-slide .slider-text{
     z-index: 1;
     position: absolute;
-    margin-left: 80px;
-    text-align: left;
-    top: 35%;
+    justify-self: center;
+    justify-items: center;
+    bottom: 50px;
+    text-align: center;
     color: white;
     font-family: Raleway;
     display: grid;
     gap: 10px;
+}
+
+.slider-hider{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw !important;
+    opacity: .9;
 }
 
 .swiper-slide .slider-text h3{
@@ -670,6 +680,7 @@ section{
     font-weight: 600;
     text-transform: capitalize;
     width: max-content;
+    /* max-width: 75%; */
 }
 
 .swiper-slide .slider-text a{
@@ -682,12 +693,12 @@ section{
     border-radius: 7px;
 }
 
-.swiper-slide img {
+.swiper-slide .slider-img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7);
+    /* filter: brightness(0); */
 }
 
 .autoplay-progress {
@@ -1503,6 +1514,7 @@ input::placeholder {
     display: grid;
     gap: 60px;
     height: max-content;
+    width: 100%;
     background-image: url(../img/bg.png);
     margin-bottom: 15px;
 }
@@ -1609,7 +1621,7 @@ input::placeholder {
 .reach-out .reach-out-parent .child-2 .sect-1{
     display: grid;
     grid-template-rows: max-content;
-    margin-left: 50px;
+    justify-items: center;
     align-content: center;
 }
 
@@ -1629,10 +1641,10 @@ input::placeholder {
 
 .reach-out .reach-out-parent .child-2 form{
     display: grid;
-    width: 90vw;
+    width: 85%;
     grid-template-columns: 1fr 1fr max-content;
     justify-items: center;
-    padding-left: 30px;
+    padding-left: 10px;
     gap: 10px;
     column-gap: 5px;
     border-radius: 7px;
@@ -1940,7 +1952,6 @@ input::placeholder {
     left: 16px;
 }
 
-.gallery-box    .card:nth-child(3) {}
 
 .gallery-box .cards:hover .card {
     width: 200px;
@@ -1963,20 +1974,16 @@ input::placeholder {
     /* Opera */
 }
 
-.gallery-box .cards:hover .card:nth-child(2) {}
 
 .gallery-box .cards:hover .card:nth-child(3) {
     left: -60px;
     transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
     /* IE 9 */
-    
     -moz-transform: rotate(-5deg);
     /* Firefox */
-    
     -webkit-transform: rotate(-5deg);
     /* Safari and Chrome */
-    
     -o-transform: rotate(-5deg);
     /* Opera */
 }
@@ -2154,7 +2161,7 @@ input::placeholder {
 /* homepage responsiveness */
 @media only screen and (max-width: 1210px) {
     .swiper{
-        width: 90vw;
+        width: 100vw;
     }
     .track-order-container{
         bottom: 40px;
@@ -2362,6 +2369,11 @@ input::placeholder {
 
     .reach-out{
         margin-bottom: 80px;
+    }
+
+    .reach-out .reach-out-parent .child-2 form{
+        padding-left: 0;
+        width: 75%;
     }
 
     .faq-section .panel-title,
@@ -3334,9 +3346,7 @@ padding: 6px 9px;
     font-size: 17px;
 }
 
-.about-us .philosophy ul li::marker{
-    /* color: #ed3337; */
-}
+
 
 .about-us .philosophy .philosophy-box{
     display: grid;
