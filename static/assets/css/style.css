@@ -1554,8 +1554,6 @@ input::placeholder {
 
 .reach-out .reach-out-parent h4{
     position: relative;
-    left: 0;
-    right: 0;
     font-family: Raleway;
     font-size: 20px;
     font-weight: 600;
@@ -1564,7 +1562,7 @@ input::placeholder {
     margin: auto;
     color: #ed3337;
     width: max-content;
-    padding: 25px 0 15px 0;
+    padding: 25px 0 12px 0;
     z-index: 2;
     
 }
@@ -1631,7 +1629,7 @@ input::placeholder {
 
 .reach-out .reach-out-parent .child-2 form{
     display: grid;
-    width: 90%;
+    width: 90vw;
     grid-template-columns: 1fr 1fr max-content;
     justify-items: center;
     padding-left: 30px;
@@ -1882,6 +1880,9 @@ input::placeholder {
 /* gallery */
 .gallery-box{
     position: relative;
+    width: 100vw;
+    overflow: auto;
+    padding-inline: 10px;
 }
 
 .gallery-box .faq-content{
@@ -1893,7 +1894,6 @@ input::placeholder {
     position: relative;
     height: 200px;
     width: 200px;
-    float: left;
     margin: 20px;
 }
 
@@ -2154,7 +2154,7 @@ input::placeholder {
 /* homepage responsiveness */
 @media only screen and (max-width: 1210px) {
     .swiper{
-        width: 100vw;
+        width: 90vw;
     }
     .track-order-container{
         bottom: 40px;
@@ -2214,11 +2214,6 @@ input::placeholder {
     }
 
 
-    .reach-out .reach-out-parent .child-2 form div:nth-child(2),
-    .reach-out .reach-out-parent .child-2 form div:nth-child(3) {
-        grid-column: span 2;
-    }
-
     
     .faq-section .faq-groups{
         width: 100%;
@@ -2269,17 +2264,9 @@ input::placeholder {
         grid-template-columns: 1fr;
     }
     
-    .reach-out .reach-out-parent h4{
-        margin-left: 0;
-        justify-self: center;
-    }
 
     .reach-out .reach-out-parent .child-2{
         gap: 20px;
-    }
-
-    .reach-out .reach-out-parent .child-2 form{
-        padding-left: 50px;
     }
 
     .swiper-slide-testimonial h1{
@@ -2405,6 +2392,12 @@ input::placeholder {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .reach-out .reach-out-parent .child-2 form{
+        grid-template-columns: 1fr;
+    }
+}
+
 @media only screen and (max-width: 555px) {
     .swiper-slide .slider-text h1{
         font-size: 31px;
@@ -2434,30 +2427,8 @@ input::placeholder {
         overflow: hidden;
     }
 
-    
-
     .reach-out{
         padding-inline: 50px;
-    }
-
-    .reach-out .reach-out-parent .child-2 .sect-1,
-    .reach-out .reach-out-parent .child-2 form{
-        width: 90%;
-        justify-self: center;
-    }
-
-    .reach-out .reach-out-parent .child-2 form{
-        padding-left: 0;
-    }
-
-    .reach-out .reach-out-parent .child-2 .sect-1{
-        gap: 22px;
-    }
-
-
-
-    .testimonials .testimonials-header h5{
-        font-size: 15px;
     }
 
     .testimonials .testimonials-header h1{
@@ -2477,7 +2448,7 @@ input::placeholder {
     }
     .testimonials{
         grid-template-rows: max-content max-content max-content;
-        gap: 40px;
+        gap: 25px;
         margin-top: 20px;
         min-height: 45vh;
     }
@@ -2486,7 +2457,13 @@ input::placeholder {
     }
 
     .faq-section .faq-groups{
-        width: 70%;
+        width: 94vw;
+        grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+        gap: 6px;
+    }
+
+    .gallery-box .cards{
+        margin-left: 0;
     }
 
     .faq-section .faq-content{
@@ -2577,17 +2554,17 @@ input::placeholder {
 @media only screen and (max-width: 400px) {
     
     .swiper-slide .slider-text {
-      top: 25px;
-     }
-     
-     .swiper-slide .slider-text h1{
-         font-size: 28px;
-     }
-     
-     .swiper-slide .slider-text h3{
-         font-size: 17px;
-     }
-     
+    top: 25px;
+    }
+    
+    .swiper-slide .slider-text h1{
+        font-size: 28px;
+    }
+    
+    .swiper-slide .slider-text h3{
+        font-size: 17px;
+    }
+    
     .overlay-sol-menu a{
         font-size: 14px !important;
     }    
@@ -2625,92 +2602,87 @@ input::placeholder {
     }
 
 
-  .mySwiper {
-    height: calc(60vh - 120px);
-  }
-  
-  
-  
-  
-  .swiper-slide .slider-text a{
-      padding: 8px 18px;
-      /*font-size: 12px;*/
-  }
-  
-  
-  
-  .track-your-order input {
+    .mySwiper {
+        height: calc(60vh - 120px);
+    }
+
+
+    .swiper-slide .slider-text a{
+        padding: 8px 18px;
+        /*font-size: 12px;*/
+    }
+
+
+
+.track-your-order input {
     width: 223px;
     height: 2rem;
     font-size: 9.7px;
     background-position: 7px 5px;
-  }
-  
-  .track-your-order button {
-  font-size: 9.7px;
-  padding: 6px 9px;
-  }
-  
-   .homepage-services {
+}
+
+.track-your-order button {
+font-size: 9.7px;
+padding: 6px 9px;
+}
+
+.homepage-services {
     margin-block: 8px;
-  }
-  
-  .homepage-services h1 {
-      font-size: 24px;
-  }
-  
-   .service-cards .icon-1 {
+}
+
+.homepage-services h1 {
+    font-size: 24px;
+}
+
+.service-cards .icon-1 {
     width: 40px;
-  }
-  
-  .service-cards .text-wrapper {
+}
+
+.service-cards .text-wrapper {
     font-size: 18px !important;
     padding-bottom: 2px;
-  }
-  
-  .service-cards p{
-      font-size: 17.5px !important;
-  }
-  
-  .homepage-services .service-cards div{
-      gap: 0;
-      background: #dad7d7;
-      padding: 10px;
-  }
-  
-  
-  .location-image .child-1 h1{
-      font-size: 18px;
-  }
-  
-  .location-image .child-1 h4 {
-      font-size: 18px;
-  }
-  
-  .location-image .child-1 h6{
-      font-size: 19px;
-  }
-  
-  .location-container .child-2 {
+}
+
+.service-cards p{
+    font-size: 17.5px !important;
+}
+
+.homepage-services .service-cards div{
+    gap: 0;
+    background: #dad7d7;
+    padding: 10px;
+}
+
+
+.location-image .child-1 h1{
+    font-size: 18px;
+}
+
+.location-image .child-1 h4 {
+    font-size: 18px;
+}
+
+.location-image .child-1 h6{
+    font-size: 19px;
+}
+
+.location-container .child-2 {
     font-size: 14px;
-  }
-  
-  
-  .location-image .child-4 a {
-      font-size: 15px;
-   }
-   
-   .our-sermons-cards-container {
-      border-radius: 30px;
-      margin-bottom: 40px;
-   }
-   
-   
+}
+
+
+.location-image .child-4 a {
+    font-size: 15px;
+}
+
+.our-sermons-cards-container {
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+
     
-    .reach-out .reach-out-parent .child-2 .sect-1,
-    .reach-out .reach-out-parent .child-2 form{
-        padding-inline: 152px;
-    }
+    
     
     .reach-out .reach-out-parent .child-2 h5,
     .reach-out .reach-out-parent .child-2 h2,
@@ -2728,53 +2700,45 @@ input::placeholder {
         width: 85%;
     }
     
-     .testimonials .testimonials-header .Quote-icon {
-        width: 19px;
-        height: 29px;
-        left: 18px;
-        position: relative;
-     }
-     
-     .swiper-slide-testimonial .test-card-footer span:nth-child(1) img {
-          width: 12px;
-          height: 12px;
-     }
-     
-     .swiper-slide-testimonial {
+    
+    
+    .swiper-slide-testimonial .test-card-footer span:nth-child(1) img {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .swiper-slide-testimonial {
         width: 280px;
         font-size: 13px;
         padding: 15px;
-        height: 160px;
         margin-inline: 7px;
-     }
-     
-     .faq-section {
-      width: 100vw;
-      justify-items: center;
-      margin: auto;
-      margin-bottom: 100px;
     }
     
-     .faq-section .faq-groups {
-        width: 100%;
-      }
-      
-     .faq-section .faq-content {
+    .faq-section {
+    width: 100vw;
+    justify-items: center;
+    margin: auto;
+    margin-bottom: 100px;
+    }
+    
+
+    
+    .faq-section .faq-content {
         padding-left: 0;
-     }
-     
-     .faq-section .plus {
+    }
+    
+    .faq-section .plus {
         margin-left: 9px;
-     }
-     
-     .faq-section .panel-title {
+    }
+    
+    .faq-section .panel-title {
         padding: 10px 10px 0 26px;
-     }
-     
-     .faq-section {
+    }
+    
+    .faq-section {
         padding: 10px;
-     }
-          
+    }
+        
 }
 
 
