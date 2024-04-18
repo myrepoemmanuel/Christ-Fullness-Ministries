@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class HomepageSliders(models.Model):
     slider_title = models.CharField(max_length=200)
-    slider_image = models.ImageField(null=True, blank=True, upload_to="homepage_sliders")
+    slider_image = models.ImageField(null=True, blank=True)
     slider_link = models.CharField(max_length=200)
     slider_description = models.TextField(max_length=200)
     
@@ -33,19 +33,19 @@ class HomepageSliders(models.Model):
 class HomeSections(models.Model):
     # hompage social event boxes
     social_event_1 = models.CharField(null=True, blank=True, max_length=200)
-    social_event_1_image = models.ImageField(null=True, blank=True, upload_to="Home_sections/SocialEvents_img")
+    social_event_1_image = models.ImageField(null=True, blank=True)
     social_event_1_description = models.TextField(null=True, blank=True, max_length=200)
 
     social_event_2 = models.CharField(null=True, blank=True, max_length=200)
-    social_event_2_image = models.ImageField(null=True, blank=True, upload_to="Home_sections/SocialEvents_img")
+    social_event_2_image = models.ImageField(null=True, blank=True)
     social_event_2_description = models.TextField(null=True, blank=True, max_length=200)
 
     social_event_3 = models.CharField(null=True, blank=True, max_length=200)
-    social_event_3_image = models.ImageField(null=True, blank=True, upload_to="Home_sections/SocialEvents_img")
+    social_event_3_image = models.ImageField(null=True, blank=True)
     social_event_3_description = models.TextField(null=True, blank=True, max_length=200)
 
     # hompage aboutus
-    about_img = models.ImageField(null=True, blank=True, upload_to="Home_sections/home_about")
+    about_img = models.ImageField(null=True, blank=True)
     about_description = models.TextField(null=True, blank=True, max_length=200)
 
     # hompage sermons
@@ -103,7 +103,7 @@ class Leaders(models.Model):
     name = models.CharField(max_length=200)
     position = models.CharField(max_length=200)
     description = models.TextField(max_length=20000)
-    image = models.ImageField(null=True, blank=True, upload_to="leaders_img")
+    image = models.ImageField(null=True, blank=True)
     
     def __str__(self):
         return self.name
@@ -124,16 +124,16 @@ class About(models.Model):
     vision = models.TextField(max_length=2000)
     mission = models.TextField(max_length=2000)
     core_value_1 = models.CharField(max_length=200)
-    core_value_1_image = models.ImageField(null=True, blank=True, upload_to="core_values_img")
+    core_value_1_image = models.ImageField(null=True, blank=True)
 
     core_value_2 = models.CharField(max_length=200)
-    core_value_2_image = models.ImageField(null=True, blank=True, upload_to="core_values_img")
+    core_value_2_image = models.ImageField(null=True, blank=True)
 
     core_value_3 = models.CharField(max_length=200)
-    core_value_3_image = models.ImageField(null=True, blank=True, upload_to="core_values_img")
+    core_value_3_image = models.ImageField(null=True, blank=True)
 
     core_value_4 = models.CharField(max_length=200)
-    core_value_4_image = models.ImageField(null=True, blank=True, upload_to="core_values_img")
+    core_value_4_image = models.ImageField(null=True, blank=True)
     
     def __str__(self):
         return "About us"
@@ -177,18 +177,18 @@ class About(models.Model):
 class GetInvolved(models.Model):
     name = models.TextField(max_length=200)
     page_description = models.TextField(max_length=2000)
-    page_background = models.ImageField(null=True, blank=True, upload_to="GetInvolved_img")
+    page_background = models.ImageField(null=True, blank=True)
 
     department_1 = models.CharField(max_length=200)
-    department_1_image = models.ImageField(null=True, blank=True, upload_to="GetInvolved_img")
+    department_1_image = models.ImageField(null=True, blank=True)
     department_1_description = models.TextField(max_length=200)
 
     department_2 = models.CharField(max_length=200)
-    department_2_image = models.ImageField(null=True, blank=True, upload_to="GetInvolved_img")
+    department_2_image = models.ImageField(null=True, blank=True)
     department_2_description = models.TextField(max_length=200)
 
     department_3 = models.CharField(max_length=200)
-    department_3_image = models.ImageField(null=True, blank=True, upload_to="GetInvolved_img")
+    department_3_image = models.ImageField(null=True, blank=True)
     department_3_description = models.TextField(max_length=200)
 
     def __str__(self):

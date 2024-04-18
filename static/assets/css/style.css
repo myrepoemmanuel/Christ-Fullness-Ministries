@@ -649,7 +649,7 @@ section{
 
 
 .swiper-slide .slider-text{
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     justify-self: center;
     justify-items: center;
@@ -667,6 +667,7 @@ section{
     left: 0;
     width: 100vw !important;
     opacity: .9;
+    z-index: 2;
 }
 
 .swiper-slide .slider-text h3{
