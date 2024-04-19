@@ -3,6 +3,10 @@ from django.contrib import admin
 from .models import Leaders, About, GetInvolved, HomepageSliders,HomeSections
 from .utils import upload_to_cpanel_sftp
 import ftplib
+
+import environ
+env = environ.Env()
+environ.Env.read_env()
 # Register your models here.
 
 class HomepageSlidersAdminForm(forms.ModelForm):
@@ -20,11 +24,11 @@ class HomepageSlidersAdminForm(forms.ModelForm):
                 file_path = instance.slider_image.path
                 with open(file_path, 'rb') as image_file:
                     image_content = image_file.read()
-                ftp_host = 'www.christfm.org'
-                ftp_port = 21
-                ftp_user = 'christfm@christfm.org'
-                ftp_pass = 'aba@christfm24'  # Provide your FTP password here
-                remote_file_path = '/home/christf1/christfmMedia'  # Remote path on FTP server
+                ftp_host = env('ftp_host')
+                ftp_port = env('ftp_port')
+                ftp_user = env('ftp_user')
+                ftp_pass = env('ftp_pass')  # Provide your FTP password here
+                remote_file_path = env('remote_file_path')  # Remote path on FTP server
 
             
                 with ftplib.FTP_TLS() as ftp:
