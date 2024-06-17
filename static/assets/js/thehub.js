@@ -429,7 +429,7 @@ if (window.location.href.split("/")[3] === "" ){
     // let form_button = document.getElementsByClassName("form-btn")[0];
     
     // form_button.addEventListener("click", function(e){
-    //     let client_email = "gbenga.akande@thehubng.com"
+    //     let client_email = "mail@christfm.org"
     //     let user_name = document.getElementsByName("user_name")[0].value;
     //     let phone = document.getElementsByName("phone")[0].value;
     //     let email = document.getElementsByName("email")[0].value;
@@ -465,14 +465,14 @@ footer_dictionary = {
         "text": `
             
 
-            The terms and conditions, privacy statement, acceptable products and use policy, disclaimer notices, and all agreements outlined here are applicable to the use of this website. In this context, the terms "Client," "You," and "Your" refer to the individual who logs in to this website and complies with the Company's terms and conditions. The terms "www.thehubng.com," "THL," "The Company," "Ourselves," "We," "Our," and "Us" refer to our Company. The terms "Party," "Parties," or "Us" collectively refer to both the Client and ourselves. The mentioned terminology or other words in the singular, plural, capitalization, and/or he/she or they are interchangeable and refer to the same entities.
+            The terms and conditions, privacy statement, acceptable products and use policy, disclaimer notices, and all agreements outlined here are applicable to the use of this website. In this context, the terms "Client," "You," and "Your" refer to the individual who logs in to this website and complies with the Company's terms and conditions. The terms "www.christfm.com," "THL," "The Company," "Ourselves," "We," "Our," and "Us" refer to our Company. The terms "Party," "Parties," or "Us" collectively refer to both the Client and ourselves. The mentioned terminology or other words in the singular, plural, capitalization, and/or he/she or they are interchangeable and refer to the same entities.
             
             
             <br><br>
             The following policy outlines the guidelines for products eligible for fulfillment services ("Product Policy"). We reserve the right to modify the Product Policy at any time. By continuing to use the Services after a revised version of the Product Policy has been posted, you agree to comply with the latest version.
             <br><br>
             By utilizing our fulfillment services ("Services"), you agree to adhere to this Product Policy and comply with all applicable laws and regulations.
-            The following products are strictly prohibited on thehubng.com:
+            The following products are strictly prohibited on christfm.com:
             
             <li>
             Child exploitation: Products that exploit or abuse children, including images or depictions of child abuse or sexual abuse, or products that present children in a sexual manner.
@@ -501,11 +501,11 @@ footer_dictionary = {
             
             We reserve the right, without notice, to remove any products, suspend, or terminate your account or access to the Services if you engage in activities that violate the essence or intent of this Product Policy, including activities beyond your use of the Services.
 We have the right, but not the obligation, to monitor or investigate any products and your use of our Services at any time to ensure compliance with this Product Policy, our terms and conditions of service, or any other agreement governing your use of the Services. Our determination of whether a violation of this Product Policy has occurred will be final and binding. We retain full discretion in taking any action to enforce this Product Policy, including choosing not to take any action at all.
-If you become aware of any product for which we provide services that violates this Product Policy, please contact us at info@thehubng.com to enable us to review the product, although we are not obliged to take any action regarding a specific product.
+If you become aware of any product for which we provide services that violates this Product Policy, please contact us at mail@christfm.orgng.com to enable us to review the product, although we are not obliged to take any action regarding a specific product.
 
             <br><br>
 
-If you come across any product that violates our Product Policy and is related to the services we provide, please inform us at info@thehubng.com so that we can review the product. However, please note that we are not obligated to take action regarding a specific product.
+If you come across any product that violates our Product Policy and is related to the services we provide, please inform us at mail@christfm.orgng.com so that we can review the product. However, please note that we are not obligated to take action regarding a specific product.
 
             
             
@@ -516,11 +516,11 @@ If you come across any product that violates our Product Policy and is related t
         "text": `
             
 
-            Our commitment is to safeguard your personal information and respect your privacy rights. If you have any questions or concerns about our policy or how we handle your personal information, please contact us at info@thehubng.com. In this privacy policy, we aim to provide a clear explanation of the information we collect, how we use it, and the rights you have in relation to it. We encourage you to read it carefully. If you disagree with any terms in this privacy policy, please discontinue using our sites and services.
+            Our commitment is to safeguard your personal information and respect your privacy rights. If you have any questions or concerns about our policy or how we handle your personal information, please contact us at mail@christfm.orgng.com. In this privacy policy, we aim to provide a clear explanation of the information we collect, how we use it, and the rights you have in relation to it. We encourage you to read it carefully. If you disagree with any terms in this privacy policy, please discontinue using our sites and services.
             
             <br><br>
-            The following terms apply to our Terms and Conditions, Privacy Statement, Acceptable Products and Use Policy, Disclaimer Notices, and all Agreements: "Client," "You," and "Your" refer to the person accessing this website and agreeing to the Company's terms and conditions. "Thehubng.com," "THL," "The Company," "Ourselves," "We," "Our," and "Us" refer to our company. "Party," "Parties," or "Us" refer to both the Client and ourselves. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they is considered interchangeable and refers to the same.
-                This privacy policy applies to all information collected through our website (such as www.thehubng.com) and/or any related services, sales, marketing, or events (referred to collectively as the "Services"). We encourage you to read this privacy policy carefully to make informed decisions about sharing your personal information with us.
+            The following terms apply to our Terms and Conditions, Privacy Statement, Acceptable Products and Use Policy, Disclaimer Notices, and all Agreements: "Client," "You," and "Your" refer to the person accessing this website and agreeing to the Company's terms and conditions. "christfm.com," "THL," "The Company," "Ourselves," "We," "Our," and "Us" refer to our company. "Party," "Parties," or "Us" refer to both the Client and ourselves. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they is considered interchangeable and refers to the same.
+                This privacy policy applies to all information collected through our website (such as www.christfm.com) and/or any related services, sales, marketing, or events (referred to collectively as the "Services"). We encourage you to read this privacy policy carefully to make informed decisions about sharing your personal information with us.
             
             <br><br><strong>1. What information do we collect? </strong>
             
@@ -538,10 +538,10 @@ If you come across any product that violates our Product Policy and is related t
             </li>
             
             <li>
-            Sending marketing and promotional communications: We may use the personal information you provide to send marketing materials, based on your preferences and with your consent. You can opt-out of Baptism marketing emails at any time by contacting us at info@thehubng.com or using the unsubscribe link in the email.
+            Sending marketing and promotional communications: We may use the personal information you provide to send marketing materials, based on your preferences and with your consent. You can opt-out of Baptism marketing emails at any time by contacting us at mail@christfm.orgng.com or using the unsubscribe link in the email.
             </li>
             <li>
-            Posting testimonials: Prior to posting a testimonial, we will obtain your consent to use your name and testimonial. If you want to update or delete your testimonial, please contact us at info@thehubng.com, providing your name, testimonial location, and contact information.
+            Posting testimonials: Prior to posting a testimonial, we will obtain your consent to use your name and testimonial. If you want to update or delete your testimonial, please contact us at mail@christfm.orgng.com, providing your name, testimonial location, and contact information.
             </li>
             <li>
             Delivering targeted advertising: We may use your information to create and display customized content and advertisements tailored to your interests and/or location. We may collaborate with third parties for this purpose.
@@ -647,12 +647,12 @@ If you come across any product that violates our Product Policy and is related t
             
             <br><br><strong>9. Do we collect information from minors? </strong>
             
-            We do not knowingly collect data from or market to individuals under 18 years of age. If you are under 18, you should not use our Services without the consent of a parent or guardian. If we learn that we have collected personal information from someone under 18 years of age, we will deactivate the account and promptly take steps to delete such data from our records. If you become aware of any data we have collected from children under 18, please contact us at info@thehubng.com.
+            We do not knowingly collect data from or market to individuals under 18 years of age. If you are under 18, you should not use our Services without the consent of a parent or guardian. If we learn that we have collected personal information from someone under 18 years of age, we will deactivate the account and promptly take steps to delete such data from our records. If you become aware of any data we have collected from children under 18, please contact us at mail@christfm.orgng.com.
 
             
             <br><br><strong>10. What are your privacy rights?  </strong>
             
-            You have the right to review, update, or delete the data we collect from you. Based on the laws of some countries, you may have the right to request access to your personal information, make changes to it, or have it deleted under certain circumstances. To request a review, update, or deletion of your personal information, please email your request to info@thehubng.com. We will respond to your request within 30 days.
+            You have the right to review, update, or delete the data we collect from you. Based on the laws of some countries, you may have the right to request access to your personal information, make changes to it, or have it deleted under certain circumstances. To request a review, update, or deletion of your personal information, please email your request to mail@christfm.orgng.com. We will respond to your request within 30 days.
             
             <br><br><strong>11. </strong>
             
@@ -665,11 +665,11 @@ If you come across any product that violates our Product Policy and is related t
             
             <br><br><strong>13. How can you contact us about this policy? </strong>
             
-            If you have any questions or comments about this policy, you can email us at info@thehubng.com.
+            If you have any questions or comments about this policy, you can email us at mail@christfm.orgng.com.
             
             <br><br>
             
-            To review, update, or delete the data we collect from you, please send a request to info@thehubng.com. We will respond to your request within 30 days in accordance with the applicable laws.
+            To review, update, or delete the data we collect from you, please send a request to mail@christfm.orgng.com. We will respond to your request within 30 days in accordance with the applicable laws.
 
 
             
@@ -691,18 +691,18 @@ If you come across any product that violates our Product Policy and is related t
         "text": `
             
 
-            These terms and conditions outline the rules and regulations for the use of The Hub Terminus Ltd Website, located at https://thehubng.com.
+            These terms and conditions outline the rules and regulations for the use of Christ Fullness Ministries Terminus Ltd Website, located at https://christfm.com.
             
             <br><br>
-            By accessing this website, you agree to be bound by these terms and conditions. Do not continue to use or access www.thehubng.com if you do not agree to take all of the terms and conditions stated on this page.
+            By accessing this website, you agree to be bound by these terms and conditions. Do not continue to use or access www.christfm.com if you do not agree to take all of the terms and conditions stated on this page.
             
             <br><br>
             
-            The following terminology applies to these Terms and Conditions, Privacy Statement, Acceptable Products and Use Policy, Disclaimer Notices and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "thehubng.com”, “THL”, “The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+            The following terminology applies to these Terms and Conditions, Privacy Statement, Acceptable Products and Use Policy, Disclaimer Notices and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "christfm.com”, “THL”, “The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
             
             <br><br><strong>Cookies </strong>
             
-            We employ the use of cookies. By accessing thehubng.com, you agreed to use cookies in agreement with the The Hub Terminus Ltd’s Privacy Policy.
+            We employ the use of cookies. By accessing christfm.com, you agreed to use cookies in agreement with the Christ Fullness Ministries Terminus Ltd’s Privacy Policy.
             
             
             <br><br>
@@ -710,22 +710,22 @@ If you come across any product that violates our Product Policy and is related t
             
             <br><br><strong>License </strong>
             
-            Unless otherwise stated, The Hub terminus Ltd and/or its licensors own the intellectual property rights for all material on The Hub Terminus Ltd. All intellectual property rights are reserved. You may access this from thehubng.com for your own personal use subjected to restrictions set in these terms and conditions. This Agreement shall begin on the date hereof.
+            Unless otherwise stated, Christ Fullness Ministries terminus Ltd and/or its licensors own the intellectual property rights for all material on Christ Fullness Ministries Terminus Ltd. All intellectual property rights are reserved. You may access this from christfm.com for your own personal use subjected to restrictions set in these terms and conditions. This Agreement shall begin on the date hereof.
 
             You must not:
             <li>
-            Republish material from thehubng.com
+            Republish material from christfm.com
             </li>
-            Sell, rent or sub-license material from thehubng.com
+            Sell, rent or sub-license material from christfm.com
 
             <li>
-            Reproduce, duplicate or copy material from thehubng.com
+            Reproduce, duplicate or copy material from christfm.com
 
             </li>
-            Redistribute content from thehubng.com
+            Redistribute content from christfm.com
             <li>
             <br><br>
-            Parts of this website offer educational content that are the opinions of other parties that do not reflect the views and opinions of The Hub Terminus Ltd, its agents and/or affiliates. To the extent permitted by applicable laws, The Hub Terminus Ltd shall not be liable for the content added for educational purposes only or for any liability, damages or expenses caused and/or suffered as a result of any use from 3rd parties content on this website.
+            Parts of this website offer educational content that are the opinions of other parties that do not reflect the views and opinions of Christ Fullness Ministries Terminus Ltd, its agents and/or affiliates. To the extent permitted by applicable laws, Christ Fullness Ministries Terminus Ltd shall not be liable for the content added for educational purposes only or for any liability, damages or expenses caused and/or suffered as a result of any use from 3rd parties content on this website.
 
             The following organizations may link to our Website without prior written approval:
 
@@ -760,11 +760,11 @@ If you come across any product that violates our Product Policy and is related t
             educational institutions and trade associations.
             </li>
             <br><br>
-            We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of The Hub terminus Ltd; and (d) the link is in the context of general resource information.
+            We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Christ Fullness Ministries terminus Ltd; and (d) the link is in the context of general resource information.
 
             <br><br>
             These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and(c) fits within the context of the linking party’s site.
-            If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to info @thehubng.com Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.
+            If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to info @christfm.com Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.
             <br><br>
             Approved organizations may hyperlink to our Website as follows:
 
@@ -780,7 +780,7 @@ If you come across any product that violates our Product Policy and is related t
 
             <li>
 
-            No use of The Hub Terminus Ltd logo or other artwork will be allowed for linking absent a trademark license agreement.
+            No use of Christ Fullness Ministries Terminus Ltd logo or other artwork will be allowed for linking absent a trademark license agreement.
 
             <li>
             <br><br><strong>iFrames </strong>

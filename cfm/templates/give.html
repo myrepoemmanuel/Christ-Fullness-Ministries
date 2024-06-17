@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+  
+  <div class="founders-about">
+    <div id="founders-about-close" class="founders-about-close">x</div>
+    <div class="about-card">
+        
+        <div class="ab-desc">
+            <span class="ceo-name">Terms & Conditions</span>
+            <span class="ceo-label">cfm</span>
+            <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis.</span>
+            
+        </div>
+    </div>
+  </div>
+    
+
+    
+    
+    <section class="login-page hidden">
+      <div class="guide-parent">
+        <p style="position: absolute;right: 40px; top: 10px; color: white;font-weight: 900;">Close</p>
+        <div>
+          <h3>Mobile Donation Guide</h3>
+          <p>The steps below give a detailed instruction of the form behind.</p>
+          <ul>
+            <li>Enter your phone number in this format: <span style="font-style: italic; color: brown;">254712345678 or 0712345678.</span></li>
+            <li>Type in your amount in order to receive an mobile prompt on your device.</li>
+            <li>Check the newsletter box incase you'd like to receive update of upcoming events.</li>
+            
+          </ul>
+        </div>
+
+        <div>
+          <h3>Bank Donation Guide</h3>
+          <p>Click on <span>details</span> to get the information regarding the transfer.</p>
+        </div>
+      </div>
+        <div class="child-1">
+            <img src="{% static 'assets/img/office-equipment.png' %}" alt="">
+        </div>
+
+        <div class="child-2">
+            <form method="post">
+
+                <h1>Mobile Donation</h1>
+
+                <div class="login-inputs">
+                    <label for="username">Phone Number</label>
+                    <input type="text" name="username" placeholder="Phone Number" id="Phone">
+                </div>
+
+                <div class="login-inputs">
+                    <label for="password">Amount</label>
+                    <input type="text" name="password" placeholder="Enter Amount" id="amount">
+                </div>
+
+                <div class="give-radio">
+                    <div class="radio-btn">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                            <p>Sign up to our newsletter</p>
+                        </label>
+                    </div>
+
+                    <div class="guidlines">
+                        <p class="give-guide">Guidlines</p>
+                    </div>
+
+                    
+                </div>
+
+                
+
+                <div>
+                    <button type="submit">Prompt Me</button>
+                </div>
+
+                <div class="login-register-btn">
+                    <a href="{% url 'register' %}">Give via bank? <span>Details</span></a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script type="">
+      let give_guide = document.getElementsByClassName('give-guide')[0];
+      guide_parent = document.getElementsByClassName('guide-parent')[0];
+      give_guide.addEventListener('click', function(){
+        guide_parent.style.left = "0";
+      });
+    </script>
+
+{% endblock %}

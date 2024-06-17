@@ -202,7 +202,7 @@ body{
 }
 
 .main_nav .nav-links,
-.login-btn,
+.give-btn,
 .logo{
     position: relative;
     display: grid;
@@ -420,7 +420,7 @@ body{
     object-fit: contain;
 }
 
-.main_nav .login-btn{
+.main_nav .give-btn{
     background: #ed3337;
     padding: 12px 16px;
     border-radius: 8px;
@@ -514,7 +514,7 @@ body{
 }
 
 @media only screen and (max-width: 1350px) {    
-    .main_nav .login-btn{
+    .main_nav .give-btn{
         width: max-content;
     }
     .main_nav .nav-links:nth-child(3){
@@ -546,7 +546,7 @@ body{
     }
     
     .main_nav .nav-links,
-    .login-btn{
+    .give-btn{
         display: none;
     }
 
@@ -3802,6 +3802,59 @@ padding: 6px 9px;
     color: #000;
     right: 50px;
     bottom: 150px;
+}
+
+/* give page */
+
+.give-radio{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+
+.give-radio .give-guide{
+    color: blue;
+    text-decoration: underline;
+    height: 100%;
+    width: max-content;
+    display: grid;
+    align-content: center;
+    cursor: pointer;
+}
+
+.guide-parent{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: repeat(2, max-content);
+    gap: 10px;
+    position: absolute;
+    align-self: center;
+    margin-top: 40px;
+    padding: 30px;
+    padding-top: 40px;
+    width: 43vw;
+    height: max-content;
+    background-color: #00000091;
+    z-index: 100;
+    border-radius: 10px;
+    left: -100vw;
+    transition: left .4s linear;
+}
+
+.guide-parent div{
+    display: grid;
+    width: 100%;
+    background: rgba(245, 245, 245, 0.726);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 5px;
+    font-family: poppins;
+}
+
+.guide-parent div ul{
+    display: grid;
+    gap: 8px;
+    padding-left: 20px;
 }
 
 /* login page */
