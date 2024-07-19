@@ -26,12 +26,12 @@
               </p>
             </a>
             
-            <a href="{% url 'events' %}" class="nav-links">
+            <a class="nav-links">
                 <span class="styler-bg"></span>
                 Events
             </a>
 
-            <a href="{% url 'sermons' 'all' %}" class="nav-links">
+            <a class="nav-links">
                 <span class="styler-bg"></span>
                 Sermons
             </a>
@@ -79,18 +79,17 @@
                 </p>
             </div>
 
-            <a href="{% url 'gallery' 'all' %}" class="nav-links">
+            <a class="nav-links">
                 <span class="styler-bg"></span>
                 Gallery
             </a>
-            <a href="{% url 'contactus' %}" class="nav-links how_works">
+            <a class="nav-links how_works">
                 <span class="styler-bg"></span>
-                Contact Us
+                Testimonies
             </a>
             
             <a class="nav-links" href="{% url 'about' %}">
-                <span class="styler-bg"></span>
-                About
+                <span class="styler-bg"></span>About Us
             </a>
 
             <a class="give-btn" href="{% url 'give' %}">Give Online</a>
@@ -105,15 +104,10 @@
               <div class="overlay-content">
     
                   <a href="{% url 'home' %}">Home</a>
-
-                  <a href="{% url 'events' %}">Events</a>
-
-                  <a href="{% url 'sermons' 'all' %}">Sermons</a>
                   
                   <a href="{% url 'about' %}">About Us</a>
-
     
-                  <a class="overlay-solution">Get Involved +</a>
+                  <a class="overlay-solution">Solution +</a>
                   <div class="overlay-sol-menu ">
                     <a href="{% url 'get_involved' 'missions_department' %}">Missions Department</a>
                     <a href="{% url 'get_involved' 'childrens_ministry' %}">Childrens Ministry</a>
@@ -122,10 +116,7 @@
                     <a href="{% url 'get_involved' 'discipleship_classes' %}">Discipleship Classes</a>
                   </div>
                   
-                  <a href="{% url 'gallery' 'all' %}">About Us</a>
-
                   <a href="{% url 'register' %}">Give</a>
-                  <a href="{% url 'contactus' %}">Contact Us</a>
                   
         
     
@@ -173,9 +164,10 @@
 
           <div class="other-links">
             <h1>Ministries</h1>
-            <a href="{% url 'give' %}" class="footer-links">Giving</a>
-            <a href="{% url 'sermons' 'all' %}" class="footer-links">Sermons</a>
-            <a href="{% url 'contactus' %}" class="footer-links">Contact Us</a>
+            <a class="footer-links">Giving</a>
+            <a class="footer-links">Sermons</a>
+            <a class="footer-links">Contact Us</a>
+            
           </div>
     
           <div class="Contact-Info">

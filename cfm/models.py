@@ -27,6 +27,9 @@ class HomepageSliders(models.Model):
         return url
     
     
+
+
+
 class HomeSections(models.Model):
     # hompage social event boxes
     social_event_1 = models.CharField(null=True, blank=True, max_length=200)
@@ -94,6 +97,7 @@ class HomeSections(models.Model):
         return url
     
     
+
 class Leaders(models.Model):
     user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
@@ -115,7 +119,6 @@ class Leaders(models.Model):
             url = ''
         return url
     
-
 class About(models.Model):
     abt_text = models.TextField(max_length=200)
     vision = models.TextField(max_length=2000)
@@ -226,81 +229,4 @@ class GetInvolved(models.Model):
             url = ''
         return url
     
-    
-class Events(models.Model):
-    name = models.CharField(max_length=200)
-    date = models.DateTimeField(auto_now_add=True)
-    description = models.TextField(max_length=20000)
-    image = models.ImageField(null=True, blank=True)
-    
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name_plural = 'Events'
-    
-    @property
-    def imageURL(self):
-        try:
-            url = self.image.url
-        except:
-            url = ''
-        return url
-    
-
-class Sermons(models.Model):
-    cats = (
-        ('podcast','podcast'),
-        ('celebration','celebration'),
-        ('discipleship','discipleship'),
-        ('children','children')
-    )
-    category = models.CharField(choices=cats, max_length=200, default="unlabled")
-    name = models.CharField(max_length=200)
-    link = models.CharField(max_length=200)
-    date = models.DateTimeField(auto_now_add=True)
-    description = models.TextField(max_length=20000)
-    image = models.ImageField(null=True, blank=True)
-    
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name_plural = 'Sermons'
-    
-    @property
-    def imageURL(self):
-        try:
-            url = self.image.url
-        except:
-            url = ''
-        return url
-    
-
-class Gallery(models.Model):
-    cats = (
-        ('service','service'),
-        ('baptism','baptism'),
-        ('construction','construction'),
-        ('celebration','celebration'),
-        ('discipleship','discipleship'),
-        ('children','children')
-    )
-    category = models.CharField(choices=cats, max_length=200)
-    date = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(null=True, blank=True)
-    
-    def __str__(self):
-        return self.category
-
-    class Meta:
-        verbose_name_plural = 'Gallery'
-    
-    @property
-    def imageURL(self):
-        try:
-            url = self.image.url
-        except:
-            url = ''
-        return url
     

@@ -35,6 +35,68 @@ function remove_bg(i){
 }
 
 
+// how it works section on other pages
+let hiw_nav = document.getElementsByClassName("hiw")[0];
+let hiw_parent = document.getElementsByClassName("works-parent")[0]
+let hiw_services = document.getElementsByClassName("hiw-services")[0]
+let hiw_close = document.getElementsByClassName("hiw-close")[0]
+
+
+if (window.location.href.split("/")[3].includes("about")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("login")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("signin")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("register")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("order-fullfilment")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("global-product-distribution")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("flexible-storage")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("consolidation")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("consulting")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}
+function how_modal(){
+    hiw_close.addEventListener("click", function(){
+        hiw_services.style.transitionDelay = 0;
+        hiw_services.style.transform = "translateY(-100vw)";
+
+        hiw_parent.style.transitionDelay = ".5s";
+        hiw_parent.style.height = 0;
+    })
+    
+
+    hiw_parent.style.display = "grid";
+    hiw_services.style.transitionDelay = ".2s";
+    hiw_parent.style.transitionDelay = "0";
+    hiw_parent.style.transition = ".2s";
+    hiw_parent.style.height = "100vh";
+    hiw_services.style.transform = "translateY(0)";
+
+}
 
 // about us card func 
 
@@ -246,12 +308,11 @@ video_dictionary = {
     "video3":{"online":"https://www.youtube.com/embed/6EDCnhbUpgE?rel=0&enablejsapi=1"},
 }
 
-if (window.location.href.split("/")[3] === "" || window.location.href.split("/")[3] === "sermons"){
+if (window.location.href.split("/")[3] === "" ){
 
     let service_video = document.getElementsByClassName("service-video")[0];
 
     let video_cards = document.getElementsByClassName("card-image");
-    let sermon_cards = document.getElementsByClassName("event_card");
 
     let video_link = document.getElementsByClassName("ab-img")[0];
     let video_card = document.getElementsByClassName("video-card")[0];
@@ -259,30 +320,31 @@ if (window.location.href.split("/")[3] === "" || window.location.href.split("/")
 
 
     for (let i = 0; i < video_cards.length; i++) {
-        video_cards[i].addEventListener("click", videoIframe(video_card[i])) 
-    }
-
-    for (let i = 0; i < sermon_cards.length; i++) {
-        sermon_cards[i].addEventListener("click", videoIframe(sermon_cards[i])) 
-    }
-
-    function videoIframe(video_cards){
+        video_cards[i].addEventListener("click", function(){
             
-        video_card.style.transitionDelay = ".2s";
-        service_video.style.transitionDelay = "0";
-        service_video.style.transition = ".2s";
-        service_video.style.height = "100vh";
-        // setting video link content.....
-        let video_link = video_cards.children[1].getAttribute("data-videoLink");
+            video_card.style.transitionDelay = ".2s";
+            service_video.style.transitionDelay = "0";
+            service_video.style.transition = ".2s";
+            service_video.style.height = "100vh";
+            // setting video link content.....
+            let video_name = video_cards[i].children[1].getAttribute("data-videoLink").split("-");
+            video_data = video_dictionary[video_name[0]][video_name[1]]
 
-        video_link.children[0].style.display = "block";
-        video_link.children[1].style.display = "none";
-        video_link.children[0].setAttribute("src", video_link)
+            if (video_name[1] === "online") {
+                video_link.children[0].style.display = "block";
+                video_link.children[1].style.display = "none";
+                video_link.children[0].setAttribute("src", video_data)
+            }else if( video_name[1] === "local" ){
+                video_link.children[0].style.display = "none";
+                video_link.children[1].style.display = "block";
+                video_link.children[1].children[0].setAttribute("src", video_data)
+            }
             
+
+            video_card.style.transform = "translateY(0)";
+
+        })
         
-
-        video_card.style.transform = "translateY(0)";
-
     }
 
     function controlVideo(vidFunc) {

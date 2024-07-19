@@ -24,7 +24,7 @@
     
     <section class="login-page hidden">
       <div class="guide-parent">
-        <p class="guide-parent-close">Close</p>
+        <p style="position: absolute;right: 40px; top: 10px; color: white;font-weight: 900;">Close</p>
         <div>
           <h3>Mobile Donation Guide</h3>
           <p>The steps below give a detailed instruction of the form behind.</p>
@@ -38,13 +38,7 @@
 
         <div>
           <h3>Bank Donation Guide</h3>
-          <p>Bank and account details are below</p>
-          <ul>
-            <li>Bank Paybill: <span style="font-style: italic; color: brown;">247247</span></li>
-            <li>Account Number: 123456789</li>
-            <li>Equity Bank <img src="#" alt=""></li>
-            
-          </ul>
+          <p>Click on <span>details</span> to get the information regarding the transfer.</p>
         </div>
       </div>
         <div class="child-1">
@@ -89,7 +83,7 @@
                 </div>
 
                 <div class="login-register-btn">
-                    <a href="{% url 'contactus' %}">Need More Help? <span>Contact Us</span></a>
+                    <a href="{% url 'register' %}">Give via bank? <span>Details</span></a>
                 </div>
             </form>
         </div>
@@ -97,13 +91,9 @@
 
     <script type="">
       let give_guide = document.getElementsByClassName('give-guide')[0];
-      let guide_close = document.getElementsByClassName('guide-parent-close')[0];
       guide_parent = document.getElementsByClassName('guide-parent')[0];
       give_guide.addEventListener('click', function(){
         guide_parent.style.left = "0";
-      });
-      guide_close.addEventListener('click', function(){
-        guide_parent.style.left = "-100vw";
       });
     </script>
 
