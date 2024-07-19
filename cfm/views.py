@@ -90,16 +90,12 @@ def register(request):
     
         return render(request, 'register.html')
 
-<<<<<<< Updated upstream
-def signin(request):
-=======
 def give(request):
     return render(request, 'give.html')
 
 
 def contactus(request):
     return render(request, 'contactus.html')
->>>>>>> Stashed changes
 
 def gallery(request, *args, **kwargs):
 
