@@ -259,21 +259,21 @@ if (window.location.href.split("/")[3] === "" || window.location.href.split("/")
 
 
     for (let i = 0; i < video_cards.length; i++) {
-        video_cards[i].addEventListener("click", videoIframe(video_card[i])) 
+        video_cards[i].addEventListener("click", () => { videoIframe(video_cards[i]) } ) 
     }
 
     for (let i = 0; i < sermon_cards.length; i++) {
-        sermon_cards[i].addEventListener("click", videoIframe(sermon_cards[i])) 
+        sermon_cards[i].addEventListener("click", () => { videoIframe(sermon_cards[i]) } ) 
     }
 
-    function videoIframe(video_cards){
-            
+    function videoIframe(video_crds){
+        console.log(video_crds)
         video_card.style.transitionDelay = ".2s";
         service_video.style.transitionDelay = "0";
         service_video.style.transition = ".2s";
         service_video.style.height = "100vh";
         // setting video link content.....
-        let video_link = video_cards.children[1].getAttribute("data-videoLink");
+        let video_link = video_crds.children[1].getAttribute("data-videoLink");
 
         video_link.children[0].style.display = "block";
         video_link.children[1].style.display = "none";
