@@ -1885,7 +1885,210 @@ input::placeholder {
     border-radius: 50%;
 }
 
+/* videos */
+
+.service-video{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000cf;
+    z-index: 100;
+    overflow: hidden;
+    transition: height .2s;
+    height: 0;
+}
+
+.service-video-close{
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    font-family: Poppins;
+    cursor: pointer;
+}
+
+.service-video .video-card{
+    display: grid;
+    align-items: center;
+    width: 70vw;
+    height: 65vh;
+    grid-template-columns: repeat(1, 1fr);
+    transition: .5s;
+    transform: translateY(-100vw);
+}
+
+.service-video .ab-img{
+    display: grid;
+    justify-self: center;
+    width: 80%;
+    height: 80%;
+}
+
+.service-video .ab-img iframe{
+    width: 100%;
+    height: 52vh;
+    object-fit: cover;
+}
+
+/* events */
+
+.events-sect{
+    display: grid;
+    grid-template-rows: max-content max-content;
+    gap: 40px;
+    padding-top: 150px;
+    padding-bottom: 40px;
+    background-color: transparent;
+    background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 7%, rgb(167, 164, 164) 47%,rgba(82, 82, 82, 0.3) 145% );
+    margin-bottom: 0;
+}
+
+.events-sect h1{
+    font-family: Lato;
+    font-size: 40px;
+    width: 70vw;
+    justify-self: center;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.events-sect .events{
+    display: grid;
+    grid-auto-rows: 45vh;
+    gap: 40px;
+    width: 70vw;
+    justify-self: center;
+}
+
+.events .event_card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    background-color: transparent;
+    /* background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 7%, rgb(167, 164, 164) 47%,rgba(82, 82, 82, 0.3) 145% ); */
+    margin-bottom: 0;
+    backdrop-filter: blur(23px);
+    padding: 20px;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.events .event_card:hover{
+    box-shadow: 0 0 80px -40px black;
+}
+
+.event_card .event_img{
+    width: 100%;
+    height: 100%;
+}
+
+.event_card .event_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.event_card_text{
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.event_card_text h2, .event_card_text p{
+    font-family: Lato;
+}
+
+.event_card_text .event_card_date{
+    font-style: italic;
+}
+
+.event_card_text .event_card_btn{
+    width: max-content;
+    display: grid;
+    text-align: center;
+    padding: 15px 30px;
+    background: #f47517;
+    border-radius: 7px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.event_card_text .event_card_btn:hover{
+    background: #8c8c8c;
+}
+
+
+
 /* gallery */
+.gallery-sect{
+    display: grid;
+    grid-template-rows: max-content max-content;
+    justify-content: center;
+    min-height: 50vh;
+    padding-top: 150px;
+    gap: 20px;
+}
+
+.gallery-category{
+    display: grid;
+    grid-template-columns: repeat(7, max-content);
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-category a{
+    text-decoration: none;
+    background: #ed3337;
+    color: white;
+    font-family: Lato;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 7px;
+    transition: background .3s;
+    cursor: pointer;
+}
+
+.gallery-category a:hover{
+    background: #000;
+}
+
+.gallery-sect .all_images{
+    grid-template-columns: repeat(3, 1fr);
+    width: 85vw;
+    border: 1px grey solid;
+}
+
+.all_images .img-cls{
+    width: 25vw;
+    height: auto;
+    object-fit: cover;
+}
+
+/* sermomns editing */
+
+
+.sermons .events{
+    display: grid;
+    width: 80vw;
+    height: max-content;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*  homepage gallery  */
 .gallery-box{
     position: relative;
     width: 100vw;
@@ -3700,71 +3903,79 @@ padding: 6px 9px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 80%;
+    width: 85vw;
     margin: auto;
     min-height: 50vh;
-    margin-block: 40px;
-    background: #FFF;
-    border-radius: 17px;
+    padding-top: 150px;
+    padding-bottom: 40px;
+    /* border: 7px black solid; */
+    /* background: rgba(122, 120, 120, 0.1); */
+    /* backdrop-filter: blur(23px); */
 }
 
-.contact-us .contact-us-form{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: grid;
-}
 
-.contact-us .contact-us-form form{
+.contact-us .contact_us_form{
     display: grid;
-    grid-template-rows: repeat(7, max-content);
-    gap: 15px;
+    grid-template-rows: repeat(6, max-content);
+    gap: 10px;
     width: 100%;
     height: 100%;
     padding: 20px 80px;
     border-radius: 17px;
-    background: #2F80ED;
 }
 
-.contact-us .contact-us-form form h1{
-    color: #FFF;
-    font-family: Raleway;
+.contact-us .contact_us_form h1{
+    color: #000000;
+    font-family: Lato;
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
 }
 
-.contact-us .contact-us-form form h5{
-    color: #FFF;
-    font-family: Raleway;
-    font-size: 18px;
+.contact-us .contact_us_form h5{
+    color: #000000;
+    font-family: Lato;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
 }
 
-.contact-us .contact-us-form form input{
+.contact_us_form .name_email{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.contact-us .contact_us_form input{
     position: relative;
     width: 100%;
-    background: #D9D9D9;
+    background: transparent;
     outline: none;
     border: none;
+    border-bottom: 2px black solid;
     height: 50px;
     padding: 5px;
 }
 
-.contact-us .contact-us-form form textarea{
+.contact-us .contact_us_form input::placeholder{
+    color: #00000097;
+    font-family: monospace;
+}
+
+.contact-us .contact_us_form textarea{
     position: relative;
     width: 100%;
-    background: #D9D9D9;
+    background: transparent;
     outline: none;
     border: none;
     height: 150px;
     padding: 5px;
+    border-bottom: 2px black solid;
 }
 
-.contact-us .contact-us-form form button{
+.contact-us .contact_us_form input[type='submit']{
     position: relative;
-    width: max-content;
+    width: 100%;
     height: max-content;
     padding: 15px 40px;
     border-radius: 8px;
@@ -3772,38 +3983,120 @@ padding: 6px 9px;
     border: none;
     background: #D9D9D9;
     font-weight: 700;
+    transition: background .3s;
+    cursor: pointer;
 }
 
-.contact-us .contact-us-map{
-    position: relative;
-    width: 100%;
-    height: 60vh;
+.contact-us .contact_us_form input[type='submit']:hover{
+    background: black;
+    color: #D9D9D9;
+
 }
 
-.contact-us .contact-us-map .vector-map{
-    position: relative;
-    width: 110%;
-    height: 40%;
-    left: -10%;
-    z-index: 5;
+.contact-location{
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    gap: 30px;
+    padding-top: 20px;
+    width: max-content;
 }
 
-.contact-us .contact-us-map .map{
+.contact-location .location_img{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-location .location_img img{
+
+}
+
+.contact-location h1,
+.contact-location .location_img p{
+    font-family: Lato;
+}
+
+.contact-location .location_img span{
+    font-size: 14px;
+    font-style: italic;
+}
+
+.contact-location .c_links{
+    color: rgba(60, 81, 167, 0.729);
+    font-family: Lato;
+    display: grid;
+    gap: 8px;
+}
+
+<<<<<<< Updated upstream
+=======
+/* give page */
+
+.give-radio{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+
+.give-radio .give-guide{
+    color: blue;
+    text-decoration: underline;
+    height: 100%;
+    width: max-content;
+    display: grid;
+    align-content: center;
+    cursor: pointer;
+}
+
+.guide-parent{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(2, max-content);
+    gap: 10px;
     position: absolute;
-    top: 110px;
+    align-self: center;
+    margin-top: 40px;
+    padding: 30px;
+    padding-top: 40px;
+    width: 43vw;
+    height: 55vh;
+    background-color: #00000091;
+    z-index: 100;
+    border-radius: 10px;
+    left: -100vw;
+    transition: left .4s linear;
+    overflow: hidden;
+    overflow-y: auto;
+
+}
+
+.guide-parent div{
+    display: grid;
     width: 100%;
-    height: 80%;
-    object-fit: contain;
+    background: rgba(245, 245, 245, 0.726);
+    border-radius: 10px;
+    padding: 20px;
+    height: max-content;
+    gap: 5px;
+    font-family: poppins;
 }
 
-.contact-us .contact-us-map h3{
+.guide-parent .guide-parent-close{
     position: absolute;
-    z-index: 3;
-    color: #000;
-    right: 50px;
-    bottom: 150px;
+    right: 40px; 
+    top: 10px; 
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
 }
 
+.guide-parent div ul{
+    display: grid;
+    gap: 8px;
+    padding-left: 20px;
+}
+
+>>>>>>> Stashed changes
 /* login page */
 
 .login-page{

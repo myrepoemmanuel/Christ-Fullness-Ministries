@@ -90,9 +90,52 @@ def register(request):
     
         return render(request, 'register.html')
 
+<<<<<<< Updated upstream
 def signin(request):
+=======
+def give(request):
+    return render(request, 'give.html')
 
+
+def contactus(request):
+    return render(request, 'contactus.html')
+>>>>>>> Stashed changes
+
+def gallery(request, *args, **kwargs):
+
+    cat = kwargs['cat']
     
+    if cat == 'all':
+        all_images = Gallery.objects.all()
+    else:
+        all_images = Gallery.objects.filter(category=cat.lower())
+    context = {
+        'all_images':all_images,
+    }
+    return render(request, 'gallery.html', context)
+
+def events(request):
+    all_events = Events.objects.all()
+    context = {
+        'all_events':all_events
+    }
+    return render(request, 'events.html', context)
+
+
+def sermons(request, *args, **kwargs):
+    cat = kwargs['cat']
+
+    if cat == 'all':
+        all_sermons = Sermons.objects.all()
+    else:
+        all_sermons = Sermons.objects.filter(category=cat.lower())
+    context = {
+        'all_sermons':all_sermons
+    }
+    return render(request, 'sermons.html', context)
+
+
+def signin(request):
     return render(request, 'login.html')
 
 
