@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+    <section class="gallery-sect">
+        <div class="gallery-category">
+            <a href="{% url 'gallery' 'all' %}" class="gallery-link">All Images</a>
+            <a href="{% url 'gallery' 'service' %}" class="gallery-link">Service</a>
+            <a href="{% url 'gallery' 'baptism' %}" class="gallery-link">Baptism</a>
+            <a href="{% url 'gallery' 'construction' %}" class="gallery-link">Construction</a>
+            <a href="{% url 'gallery' 'celebration' %}" class="gallery-link">Celebrations</a>
+            <a href="{% url 'gallery' 'discipline' %}" class="gallery-link">Discipleship</a>
+            <a href="{% url 'gallery' 'children' %}" class="gallery-link">Children Ministry</a>
+        </div>
+
+        <div class="all_images">
+                {% for img in all_images %}
+                    <img class="img-cls" src="{{imageURL}}" alt="">
+                {% endfor %}
+            </section>
+        </div>
+
+{% endblock %}

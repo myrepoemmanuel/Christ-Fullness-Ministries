@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+<div class="founders-about">
+    <div id="founders-about-close" class="founders-about-close">x</div>
+    <div class="about-card">
+        
+        <div class="ab-desc">
+            <span class="ceo-name">Terms & Conditions</span>
+            <span class="ceo-label">cfm</span>
+            <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis.</span>
+            
+        </div>
+    </div>
+</div>
+    
+
+<section class="contact-us">
+    <form class="contact_us_form" method="post">
+        {% csrf_token %}
+        <h1>Contact Us</h1>
+        <h5>Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Tempora qui, 
+            inventore quaerat necessitatibus 
+            excepturi officiis. Fuga iure placeat vel 
+            temporibus tempore assumen
+        </h5>
+
+        <div class="name_email">
+            <div class="contact-inputs">
+                <input type="text" name="name" placeholder="Full Name" id="Phone">
+            </div>
+
+            <div class="contact-inputs">
+                <input type="text" name="email" placeholder="Email" id="amount">
+            </div>
+        </div>
+
+        <div class="contact-inputs">
+            <input type="text" name="subject" placeholder="Subject" id="amount">
+        </div>
+
+        <div class="contact-inputs">
+            <textarea name="message" placeholder="How can we assist you?"></textarea>
+        </div>
+
+        <input type="submit" value="Send A Message" name="submit_form" id="submit_form">
+    </form>
+    <div class="contact-location">
+        <h1>Find Us</h1>
+        <div class="location_img">
+            <img src="{% static 'assets/img/map_icon.png' %}" alt="map icon">
+            <p>Main Church Location <br> <span>Church Rd, Off Magadi Rd, Ongata Rongai.</span></p>
+
+        </div>
+
+        <p class='c_links'>+254 700 264 927 <br><span>mail@christfm.org</span></p>
+    </div>
+</section>
+
+{% endblock %}
