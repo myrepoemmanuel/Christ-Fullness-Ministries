@@ -202,7 +202,7 @@ body{
 }
 
 .main_nav .nav-links,
-.login-btn,
+.give-btn,
 .logo{
     position: relative;
     display: grid;
@@ -420,7 +420,7 @@ body{
     object-fit: contain;
 }
 
-.main_nav .login-btn{
+.main_nav .give-btn{
     background: #ed3337;
     padding: 12px 16px;
     border-radius: 8px;
@@ -514,7 +514,7 @@ body{
 }
 
 @media only screen and (max-width: 1350px) {    
-    .main_nav .login-btn{
+    .main_nav .give-btn{
         width: max-content;
     }
     .main_nav .nav-links:nth-child(3){
@@ -546,7 +546,7 @@ body{
     }
     
     .main_nav .nav-links,
-    .login-btn{
+    .give-btn{
         display: none;
     }
 

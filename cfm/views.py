@@ -28,7 +28,7 @@ def home(request):
                     subject='New Inquiry',
                     message=email_content,
                     from_email=settings.EMAIL_HOST_USER,
-                    recipient_list=['info@thehubng.com'],  
+                    recipient_list=['mail@christfm.orgng.com'],  
                     fail_silently=False,
                 )
                
@@ -84,7 +84,7 @@ def register(request):
                     subject='New User',
                     message=email_content,
                     from_email=settings.EMAIL_HOST_USER,
-                    recipient_list=['info@thehubng.com'],  
+                    recipient_list=['mail@christfm.orgng.com'],  
                     fail_silently=False,
                 )
                
@@ -96,6 +96,7 @@ def register(request):
         return render(request, 'register.html')
 
 def give(request):
+    
     return render(request, 'give.html')
 
 
@@ -137,6 +138,8 @@ def sermons(request, *args, **kwargs):
 
 
 def signin(request):
+
+    
     return render(request, 'login.html')
 
 

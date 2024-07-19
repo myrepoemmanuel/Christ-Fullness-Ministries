@@ -86,12 +86,20 @@ WSGI_APPLICATION = 'christ_fullness.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 
-    'default': dj_database_url.parse(env("DATABASE_URL"), conn_max_age=600),
+    # 'default': dj_database_url.parse(env("DATABASE_URL"), conn_max_age=600),
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': env("DATABASE_NAME"),
+    #     'USERNAME': env("DATABASE_USER"),
+    #     'PASSWORD': env("DATABASE_PASSWORD"),
+    #     'HOST': env("DATABASE_URL"),
+    #     'PORT': 5432
+    # }
     
 }
 
