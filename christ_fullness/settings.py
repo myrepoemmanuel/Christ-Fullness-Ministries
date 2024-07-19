@@ -33,7 +33,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["christ-fullness-ministries.onrender.com","christfm.org", '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ["christ-fullness-ministries.onrender.com", "christ-fullness-ministries-1.onrender.com","christfm.org", '127.0.0.1', 'localhost']
 
 
 # Application definition
