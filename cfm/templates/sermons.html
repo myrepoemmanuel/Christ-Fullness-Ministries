@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+    <section class="sermons gallery-sect">
+        <div class="gallery-category">
+            <a href="{% url 'sermons' 'sermons' %}" class="gallery-link">All Sermons</a>
+            <a href="{% url 'sermons' 'discipleship' %}" class="gallery-link">Discipleship</a>
+            <a href="{% url 'sermons' 'children' %}" class="gallery-link">Children Ministry</a>
+            <a href="{% url 'sermons' 'podcast' %}" class="gallery-link">Podcasts</a>
+            <a href="{% url 'sermons' 'celebration' %}" class="gallery-link">Celebrations</a>
+        </div>
+
+        <div class="events">
+            <!-- events card 1  -->
+            <div class="event_card">
+                <div class="event_img">
+                    <img src="" alt="">
+                </div>
+                <div class="event_card_text">
+                    <h2 class="event_card_title">Sermon name</h2>
+                    <p class="event_card_date">Sermon date</p>
+                    <p class="event_card_desc">
+                        Lorem ipsum dolor sit amet, consectetur 
+                        adipisicing elit. Voluptates error sint
+                        , quam sunt assumenda minima minus!
+                    </p>
+                    <p class="event_card_btn">Watch</p>
+                </div>
+            </div>
+
+            <!-- events card 2  -->
+            <div class="event_card">
+                <div class="event_img">
+                    <img src="" alt="">
+                </div>
+                <div class="event_card_text" data-videoLink="{{link}}">
+                    <h2 class="event_card_title">Sermon name</h2>
+                    <p class="event_card_date">Sermon date</p>
+                    <p class="event_card_desc">
+                        Lorem ipsum dolor sit amet, consectetur 
+                        adipisicing elit. Voluptates error sint
+                        , quam sunt assumenda minima minus!
+                    </p>
+                    <p class="event_card_btn">Watch</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-video">
+            <div class="service-video-close">x</div>
+            <div class="video-card">
+                <div class="ab-img">
+                    <iframe src="https://www.youtube.com/embed/Lpp9bHtPAN0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
