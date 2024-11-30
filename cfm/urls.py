@@ -9,7 +9,6 @@ urlpatterns = [
     path('involve/<slug:slug>', views.solution, name = 'get_involved'),
     path('give/', views.give, name = 'give' ),
     path('signin/', views.signin, name = 'signin' ),
-    path('register/', views.register, name = 'register' ),
     path('contact/', views.contactus, name = 'contactus' ),
     path('gallery/<slug:cat>', views.gallery, name = 'gallery' ),
     path('events/', views.events, name = 'events' ),

@@ -471,12 +471,13 @@ body{
 }
 
 .overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; 
-  transition: 0.3s; 
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; 
+    transition: 0.3s; 
+    cursor: pointer;
 }
 
 .overlay-sol-menu{
@@ -647,7 +648,8 @@ section{
     position: relative;
     text-align: left;
     font-size: 28px;
-    background: #ed3337;
+    background: url(https://res.cloudinary.com/dy6jaq5bq/image/upload/v1732964074/night_sky_fnvmcc.jpg);
+    background-size: 100% 100%;
     height: 100%;
     display: grid;
     
@@ -691,6 +693,7 @@ section{
 }
 
 .swiper-slide .slider-text a{
+    text-transform: capitalize;
     text-decoration: none;
     font-size: 20px;
     color: white;
@@ -2197,6 +2200,17 @@ input::placeholder {
     box-shadow: 0 0 80px -40px black;
 }
 
+.events .event_card:hover .event_img{
+    filter: blur(4px);
+    background: #000;
+    opacity: .7;
+    transition: .2s;
+}
+
+.events .event_card:hover h2{
+    color: black;
+}
+
 .event_card .event_img{
     width: 100%;
     height: 39vh;
@@ -2216,6 +2230,10 @@ input::placeholder {
     color: rgb(0, 0, 0);
 }
 
+.event_card_text p{
+    overflow: hidden;
+}
+
 .event_card_text h2, .event_card_text p{
     font-family: Lato;
 }
@@ -2225,8 +2243,9 @@ input::placeholder {
 }
 
 .event_card_text .event_card_btn{
-    width: max-content;
     display: grid;
+    align-content: center;
+    width: max-content;
     text-align: center;
     padding: 15px 30px;
     background: #f47517;
@@ -2254,12 +2273,13 @@ input::placeholder {
 
 .gallery-category{
     display: grid;
-    grid-template-columns: repeat(7, max-content);
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
     gap: 10px;
     justify-content: center;
 }
 
 .gallery-category a{
+    display: grid;
     text-decoration: none;
     background: #ed3337;
     color: white;
@@ -2303,9 +2323,76 @@ input::placeholder {
 
 .sermons .event_card .event_img{
     width: 100%;
-    height: 25vh;
+    height: 28vh;
 }
 
+.sermons .event_card .event_card_btn{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 5px;
+    align-content: center;
+}
+
+.sermons .event_card .event_card_btn img{
+    display: none;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* sermons main page responsiveness */
+@media only screen and (max-width: 1110px) {
+
+    .sermons .events {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .event_card_text h2{
+        font-size: 17px;
+    }
+
+    .event_card_text .event_card_date,
+    .event_card_text .event_card_desc{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .events .event_card{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .event_card .event_img{
+        filter: blur(1.7px);
+        border-radius: 15px;
+    }
+
+    .sermons .event_card_text h2,
+    .event_card_text .event_card_date,
+    .event_card_text .event_card_desc{
+        display: none;
+    }
+
+    .event_card_text h2{
+        color: white;
+        width: 50vw;
+        text-align: center;
+    }
+
+    .event_card_text{
+        position: absolute;
+        justify-items: center;
+    }
+
+    .sermons .event_card .event_card_btn img{
+        display: block;
+    }
+}
+
+/* ............................ */
 
 /* homepage responsiveness */
 @media only screen and (max-width: 1210px) {
@@ -4021,6 +4108,7 @@ input::placeholder {
     margin: auto;
     padding: 130px 0 100px 0;
     gap: 50px;
+    margin-top: 50px;
 }
 
 .login-page .child-1 {
@@ -4176,26 +4264,25 @@ input::placeholder {
 
 @media only screen and (max-width: 850px) {
     .login-page{
-        margin-top: 100px;
+        margin-top: 170px;
         margin-bottom: 30px;
+        padding-top: 60px;
     }
 
     .login-page .child-1{
         position: absolute;
         border-radius: 15px;
-        filter: brightness(.6) blur(5px);
         z-index: -1;
     }
 
     .login-page .child-2{
         width: 90vw;
-        color: #ffffff;
+        color: #000000;
         padding-left: 50px;
     }
 
     .login-page .child-2 h1{
         font-family: Poppins;
-        text-shadow: 0 0 10px white;
     }
 
     .login-page .login-inputs label{
@@ -4207,7 +4294,7 @@ input::placeholder {
     }
 
     .login-page .login-register-btn a{
-        color: #fff;
+        color: #000000;
     }
 
     .login-radio div:nth-child(2){
@@ -4216,11 +4303,8 @@ input::placeholder {
     }
 
     .login-radio div:nth-child(2) a{
-        color: #ffffff;
-        text-shadow: 0 0 7px rgb(160, 18, 18);
+        color: #000000;
     }
-
-
 }
 
 

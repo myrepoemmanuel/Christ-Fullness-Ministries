@@ -25,9 +25,12 @@
                     <h2 class="event_card_title">{{sermon.name}}</h2>
                     <p class="event_card_date">{{sermon.date}}</p>
                     <p class="event_card_desc">
-                        {{sermon.description}}
+                        {{sermon.description | slice:"-15"}}...
                     </p>
-                    <p class="event_card_btn">Watch</p>
+                    <p class="event_card_btn">
+                        Watch
+                        <img src="https://res.cloudinary.com/dy6jaq5bq/image/upload/v1725877253/video-camera_bh4mm1.png" alt="">
+                    </p>
                 </div>
             </div>
             {% endfor %}            
