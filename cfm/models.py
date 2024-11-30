@@ -43,12 +43,8 @@ class HomeSections(models.Model):
 
     # hompage aboutus
     about_img = models.ImageField(null=True, blank=True)
-    about_description = models.TextField(null=True, blank=True, max_length=200)
+    about_description = models.TextField(null=True, blank=True, max_length=3000)
 
-    # hompage sermons
-    sermon_1_link = models.CharField(null=True, blank=True, max_length=200)
-    sermon_2_link = models.CharField(null=True, blank=True, max_length=200)
-    sermon_3_link = models.CharField(null=True, blank=True, max_length=200)
 
 
 
@@ -58,17 +54,16 @@ class HomeSections(models.Model):
     class Meta:
         verbose_name_plural = 'Home sections'
 
-    def save(self, *args, **kwargs):
-        for sermon in ["sermon_1_link", "sermon_2_link", "sermon_3_link"]:
-            field_value = getattr(self, sermon)
-            # print(field_value)
-            if field_value:
-                print(field_value)
-                link_code = field_value.split("watch")[1].split("=")[1]
-                setattr(self, sermon, link_code)
-        super().save(*args, **kwargs)
 
 
+    @property
+    def imageURLabout(self):
+        try:
+            url = self.about_img.url
+        except:
+            url = ''
+        return url
+    
     @property
     def imageURL1(self):
         try:
@@ -264,6 +259,16 @@ class Sermons(models.Model):
     
     def __str__(self):
         return self.name
+    
+    def save(self, *args, **kwargs):
+        for sermon in ["link"]:
+            field_value = getattr(self, sermon)
+            # print(field_value)
+            if field_value and len(field_value)>14:
+                print(field_value)
+                link_code = field_value.split("watch")[1].split("=")[1]
+                setattr(self, sermon, link_code)
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'Sermons'

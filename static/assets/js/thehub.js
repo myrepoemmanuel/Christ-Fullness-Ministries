@@ -250,16 +250,16 @@ if (window.location.href.split("/")[3] === "" || window.location.href.split("/")
 
     let service_video = document.getElementsByClassName("service-video")[0];
 
-    let video_cards = document.getElementsByClassName("card-image");
+    let home_video_cards = document.getElementsByClassName("card-image");
     let sermon_cards = document.getElementsByClassName("event_card");
 
-    let video_link = document.getElementsByClassName("ab-img")[0];
+    let modal_video_link = document.getElementsByClassName("ab-img")[0];
     let video_card = document.getElementsByClassName("video-card")[0];
     let service_video_close = document.getElementsByClassName("service-video-close")[0];
 
 
-    for (let i = 0; i < video_cards.length; i++) {
-        video_cards[i].addEventListener("click", () => { videoIframe(video_cards[i]) } ) 
+    for (let i = 0; i < home_video_cards.length; i++) {
+        home_video_cards[i].addEventListener("click", () => { videoIframe(home_video_cards[i], modal_video_link) } ) 
     }
 
     for (let i = 0; i < sermon_cards.length; i++) {
@@ -275,18 +275,16 @@ if (window.location.href.split("/")[3] === "" || window.location.href.split("/")
         // setting video link content.....
         let video_link = video_crds.children[1].getAttribute("data-videoLink");
 
-        video_link.children[0].style.display = "block";
-        video_link.children[1].style.display = "none";
-        video_link.children[0].setAttribute("src", video_link)
+        modal_video_link.children[0].style.display = "block";
+        modal_video_link.children[1].style.display = "none";
+        modal_video_link.children[0].setAttribute("src", `https://www.youtube.com/embed/${video_link}?rel=0&enablejsapi=1`)
             
-        
-
-        video_card.style.transform = "translateY(0)";
+        video_card.style.transform = "translateY(0px)";
 
     }
 
     function controlVideo(vidFunc) {
-        let iframe = video_link.children[0].contentWindow;
+        let iframe = modal_video_link.children[0].contentWindow;
         
         iframe.postMessage(
             '{"event":"command","func":"' + vidFunc + '","args":""}',
@@ -297,7 +295,7 @@ if (window.location.href.split("/")[3] === "" || window.location.href.split("/")
 
     service_video_close.addEventListener("click", function(){
         controlVideo('pauseVideo');
-        video_link.children[1].pause()
+        modal_video_link.children[1].pause()
         video_card.style.transitionDelay = 0;
         video_card.style.transform = "translateY(-100vw)";
 

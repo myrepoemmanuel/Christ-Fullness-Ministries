@@ -37,10 +37,14 @@ def home(request):
                 print(f"Error sending email: {e}")
 
     homeSliders = HomepageSliders.objects.all()
+    homesections = HomeSections.objects.all()
+    sermons = Sermons.objects.all().order_by('-date')[:3]
     # print(homeSliders.values())
 
     context = {
-        'homeSliders': homeSliders
+        'homeSliders': homeSliders,
+        'homesections': homesections,
+        'sermons': sermons
     }
     return render(request, 'home.html', context)
 

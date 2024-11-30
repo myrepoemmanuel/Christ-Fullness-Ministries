@@ -23,7 +23,7 @@
     <div class="service-video-close">x</div>
     <div class="video-card">
         <div class="ab-img">
-          <iframe src="https://www.youtube.com/embed/Lpp9bHtPAN0">
+          <iframe src="https://www.youtube.com">
           </iframe>
           <video style="display: none;" controls>
             <source src="{% static 'assets/videos/thl.mp4' %}" type="video/mp4">
@@ -68,39 +68,40 @@
             <span></span>
           </div>
       </div>
-
+      {% for soc in homesections %}
       <section id="homepage-services" class="homepage-services">
         <h1>Social Events</h1>
-
+        
+      
         <div class="service-cards">
           <div>
-            <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+            <img class="icon-1" src="{{soc.imageURL1}}" alt="cfm social events icon">
             
-            <h1 class="text-wrapper">Church Mission</h1>
+            <h1 class="text-wrapper">{{soc.social_event_1}}</h1>
             <p class="desc-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit
+              {{soc.social_event_1_description}}
             </p>
           </div>
           
           <div>
-            <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+            <img class="icon-1" src="{{soc.imageURL2}}" alt="cfm social events icon">
             
-            <h1 class="text-wrapper">Outreach</h1>
+            <h1 class="text-wrapper">{{soc.social_event_2}}</h1>
             <p class="desc-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit
+              {{soc.social_event_2_description}}
             </p>
-            
           </div>
 
           <div>
-            <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+            <img class="icon-1" src="{{soc.imageURL3}}" alt="cfm social events icon">
             
-            <h1 class="text-wrapper">Maturity Classes</h1>
+            <h1 class="text-wrapper">{{soc.social_event_3}}</h1>
             <p class="desc-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit
+              {{soc.social_event_3_description}}
             </p>
-            
           </div>
+
+          
         </div>
       </section>
 
@@ -110,7 +111,7 @@
           <div class="location-text">
 
             <div class="child-1">
-              <img class="img-1" src="{% static 'assets/img/cfm1.png' %}" alt="">
+              <img class="img-1" src="{{soc.imageURLabout}}" alt="homepage about image">
           
 
             </div>
@@ -131,24 +132,7 @@
               
             </div>
             <div class="child-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
-              minus corporis iusto odio laboriosam vitae reprehenderit 
-              doloremque officia optio placeat, dolores et.Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
-              minus corporis iusto odio laboriosam vitae reprehenderit 
-              doloremque officia optio placeat, dolores et. <br><br>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
-              minus corporis iusto odio laboriosam vitae reprehenderit 
-              doloremque officia optio placeat, dolores et.Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
-              minus corporis iusto odio laboriosam vitae reprehenderit 
-              doloremque officia optio placeat, dolores et. <br> <br>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-              Praesentium quidem quasi ipsum! Atque, minus. Pariatur veniam aspernatur, 
-              minus corporis iusto odio laboriosam vitae reprehenderit 
-              doloremque officia optio placeat, dolores et.
+              {{soc.about_description}}
             </div>
             <div class=" child-4">
 
@@ -163,11 +147,10 @@
 
 
       </section>
-
+      {% endfor %}
 
       <section id="our-sermons" class="our-sermons">
-
-
+        
         <div class="our-sermons-cards-container">
           <div class="our-sermons-card-header">
             <div class="child-1">
@@ -183,43 +166,26 @@
           </div>
 
           <div class="service-cards">
-
+            {% for sermon in sermons %}
             <div class="child-1">
               
               <span class="card-image">
-                <img class="video_tag" src="{% static 'assets/img/play-button.png' %}" alt="">
-                <img class="host-img" data-videoLink="{{link1}}" src="{% static 'assets/img/empty-warehouse.jpg' %}" alt="">
+                <img class="video_tag" src="https://res.cloudinary.com/dy6jaq5bq/image/upload/v1725877253/video-camera_bh4mm1.png" alt="">
+                <img class="host-img" data-videoLink="{{sermon.link}}" src="{{sermon.imageURL}}" alt="">
               </span>
               
               
             </div>
-
-            <div class="child-2">
-              
-              <span class="card-image">
-                <img class="video_tag" src="{% static 'assets/img/play-button.png' %}" alt="">
-                <img class="host-img" data-videoLink="{{link2}}" src="{% static 'assets/img/empty-warehouse.jpg' %}" alt="">
-              </span>
-              
-              
-            </div>
-
-            <div class="child-3">
-              
-              <span class="card-image">
-                <img class="video_tag" src="{% static 'assets/img/play-button.png' %}" alt="">
-                <img class="host-img" data-videoLink="{{link3}}" src="{% static 'assets/img/empty-warehouse.jpg' %}" alt="">
-              </span>
-              
-              
-            </div>
+            {% endfor %}
             
           </div>
 
         </div>
+        
 
       
       </section>
+      
 
       <section id="reach-out" class="reach-out">
         
@@ -258,7 +224,7 @@
 
       <section id="testimonials" class="testimonials">
         <div class="testimonials-header">
-          <img class="Quote-icon" src="{% static 'assets/img/quote-icon.png' %}" alt="">
+          <img class="Quote-icon" src="https://res.cloudinary.com/dy6jaq5bq/image/upload/v1725884315/right_etxzvv.png" alt="">
           <div>
             <h5>Testimonies</h5>
           </div>
@@ -537,9 +503,7 @@
           }
         }
       });
-  </script>
-  <!-- testimonial slider -->
-  <script>
+  //testimonial slider
     var swiper2 = new Swiper(".mySwiper-testimonial", {
       slidesPerView: "auto",
       spaceBetween: 30,
@@ -550,5 +514,9 @@
         clickable: true,
       },
     });
+
+    //about section js
+    let abt_desc = document.getElementsByClassName('location-image')[0].children[1].innerHTML.replace(/1br/g,`<br><br>`);
+    document.getElementsByClassName('location-image')[0].children[1].innerHTML = abt_desc;
   </script>
 {% endblock %}

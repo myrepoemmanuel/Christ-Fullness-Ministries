@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Leaders, About, GetInvolved, HomepageSliders,HomeSections
+from .models import Leaders, About, GetInvolved, HomepageSliders,HomeSections, Sermons, Events, Gallery
 
 
 import environ
@@ -12,3 +12,6 @@ admin.site.register(HomeSections)
 admin.site.register(Leaders)
 admin.site.register(About)
 admin.site.register(GetInvolved)
+admin.site.register(Sermons)
+admin.site.register(Events)
+admin.site.register(Gallery)
