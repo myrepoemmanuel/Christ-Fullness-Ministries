@@ -251,7 +251,7 @@ if (window.location.href.split("/")[3] === "" || window.location.href.split("/")
     let service_video = document.getElementsByClassName("service-video")[0];
 
     let home_video_cards = document.getElementsByClassName("card-image");
-    let sermon_cards = document.getElementsByClassName("event_card");
+    let sermon_cards = document.getElementsByClassName("event_card_btn");
 
     let modal_video_link = document.getElementsByClassName("ab-img")[0];
     let video_card = document.getElementsByClassName("video-card")[0];
@@ -263,7 +263,7 @@ if (window.location.href.split("/")[3] === "" || window.location.href.split("/")
     }
 
     for (let i = 0; i < sermon_cards.length; i++) {
-        sermon_cards[i].addEventListener("click", () => { videoIframe(sermon_cards[i]) } ) 
+        sermon_cards[i].addEventListener("click", () => { videoIframe(sermon_cards[i].parentElement.parentElement) } ) 
     }
 
     function videoIframe(video_crds){

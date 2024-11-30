@@ -224,7 +224,7 @@ class GetInvolved(models.Model):
     
 class Events(models.Model):
     name = models.CharField(max_length=200)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=False)
     description = models.TextField(max_length=20000)
     image = models.ImageField(null=True, blank=True)
     

@@ -9,41 +9,22 @@
         <h1>Events</h1>
 
         <div class="events">
-
+            {% for event in all_events %}
             <!-- events card 1  -->
             <div class="event_card">
                 <div class="event_img">
-                    <img src="" alt="">
+                    <img src="{{event.imageURL}}" alt="cfm {{event.name}} event image">
                 </div>
                 <div class="event_card_text">
-                    <h2 class="event_card_title">Event name</h2>
-                    <p class="event_card_date">event date</p>
+                    <h2 class="event_card_title">{{event.name}}</h2>
+                    <p class="event_card_date">{{event.date}}</p>
                     <p class="event_card_desc">
-                        Lorem ipsum dolor sit amet, consectetur 
-                        adipisicing elit. Voluptates error sint
-                        , quam sunt assumenda minima minus!
+                        {{event.description}}
                     </p>
                     <p class="event_card_btn">Register</p>
                 </div>
             </div>
-
-            <!-- events card 2  -->
-            <div class="event_card">
-                <div class="event_img">
-                    <img src="" alt="">
-                </div>
-                <div class="event_card_text">
-                    <h2 class="event_card_title">Event name</h2>
-                    <p class="event_card_date">event date</p>
-                    <p class="event_card_desc">
-                        Lorem ipsum dolor sit amet, consectetur 
-                        adipisicing elit. Voluptates error sint
-                        , quam sunt assumenda minima minus!
-                    </p>
-                    <p class="event_card_btn">Register</p>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
     </section>
 

@@ -123,7 +123,7 @@ def gallery(request, *args, **kwargs):
 def events(request):
     all_events = Events.objects.all()
     context = {
-        'all_events':all_events
+        'all_events': all_events
     }
     return render(request, 'events.html', context)
 
@@ -136,7 +136,7 @@ def sermons(request, *args, **kwargs):
     else:
         all_sermons = Sermons.objects.filter(category=cat.lower())
     context = {
-        'all_sermons':all_sermons
+        'all_sermons': all_sermons
     }
     return render(request, 'sermons.html', context)
 
