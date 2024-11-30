@@ -4,7 +4,6 @@
 
 
 {% block content %}
-
     <section class="gallery-sect">
         <div class="gallery-category">
             <a href="{% url 'gallery' 'all' %}" class="gallery-link">All Images</a>
@@ -17,23 +16,10 @@
         </div>
 
         <div class="all_images">
-            <div id="mz-gallery-container">
-
-                <div id="mz-gallery">
                 {% for img in all_images %}
-                    <figure>
-                        <img class="img-cls" src="{{img.imageURL}}" alt="">
-                        <figcaption></figcaption>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </figure>
-                    {% endfor %}
-                </div>
-            </div>
-            
+                    <img class="img-cls" src="{{imageURL}}" alt="">
+                {% endfor %}
+            </section>
         </div>
-    </section>
 
 {% endblock %}

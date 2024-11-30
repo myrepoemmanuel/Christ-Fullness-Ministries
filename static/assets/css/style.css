@@ -1203,7 +1203,7 @@ input::placeholder {
 }
 
 
-/*  sermons section.... */
+/*  sermons home section.... */
 
 .our-sermons{
     display: grid;
@@ -1211,8 +1211,6 @@ input::placeholder {
     height: max-content;
     padding: 0 80px 0;
     margin-top: 40px;
-    
-    
 }
 
 .our-sermons-cards-container{
@@ -1518,9 +1516,6 @@ input::placeholder {
 .form-btn{
     cursor: pointer;
 }
-
-
-
 
 .reach-out .reach-out-parent{
     position: relative;
@@ -2153,6 +2148,155 @@ input::placeholder {
 .faq-section .panel {
     display: none;
 }
+
+/* events */
+
+.events-sect{
+    display: grid;
+    grid-template-rows: max-content max-content;
+    gap: 40px;
+    padding-top: 150px;
+    padding-bottom: 40px;
+    background-color: transparent;
+    background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 7%, rgb(167, 164, 164) 47%,rgba(82, 82, 82, 0.3) 145% );
+    margin-bottom: 0;
+}
+
+.events-sect h1{
+    font-family: Lato;
+    font-size: 40px;
+    width: 70vw;
+    justify-self: center;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.events-sect .events{
+    display: grid;
+    grid-auto-rows: 45vh;
+    gap: 40px;
+    width: 70vw;
+    justify-self: center;
+}
+.events .event_card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    background-color: transparent;
+    /* background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 7%, rgb(167, 164, 164) 47%,rgba(82, 82, 82, 0.3) 145% ); */
+    margin-bottom: 0;
+    backdrop-filter: blur(23px);
+    padding: 20px;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.events .event_card:hover{
+    box-shadow: 0 0 80px -40px black;
+}
+
+.event_card .event_img{
+    width: 100%;
+    height: 100%;
+}
+
+.event_card .event_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.event_card_text{
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.event_card_text h2, .event_card_text p{
+    font-family: Lato;
+}
+
+.event_card_text .event_card_date{
+    font-style: italic;
+}
+
+.event_card_text .event_card_btn{
+    width: max-content;
+    display: grid;
+    text-align: center;
+    padding: 15px 30px;
+    background: #f47517;
+    border-radius: 7px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    transition: background .3s;
+}
+.event_card_text .event_card_btn:hover{
+    background: #8c8c8c;
+}
+
+
+
+/* gallery */
+.gallery-sect{
+    display: grid;
+    grid-template-rows: max-content max-content;
+    justify-content: center;
+    min-height: 50vh;
+    padding-top: 150px;
+    gap: 20px;
+}
+
+.gallery-category{
+    display: grid;
+    grid-template-columns: repeat(7, max-content);
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-category a{
+    text-decoration: none;
+    background: #ed3337;
+    color: white;
+    font-family: Lato;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 7px;
+    transition: background .3s;
+    cursor: pointer;
+}
+
+.gallery-category a:hover{
+    background: #000;
+}
+
+.gallery-sect .all_images{
+    grid-template-columns: repeat(3, 1fr);
+    width: 85vw;
+    border: 1px grey solid;
+}
+
+.all_images .img-cls{
+    width: 25vw;
+    height: auto;
+    object-fit: cover;
+}
+
+/* sermoms main editing */
+
+
+.sermons .events{
+    display: grid;
+    width: 80vw;
+    height: max-content;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 
 /* homepage responsiveness */
 @media only screen and (max-width: 1210px) {
@@ -4463,6 +4607,8 @@ padding: 6px 9px;
 }
 
 /* ................. */
+
+
 
 
 /* section footer */
