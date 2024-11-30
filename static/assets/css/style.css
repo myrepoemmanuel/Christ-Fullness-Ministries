@@ -2652,21 +2652,22 @@ input::placeholder {
     }
     
     .track-your-order input {
-      width: 276px;
-      height: 2.5rem;
+        width: 276px;
+        height: 2.5rem;
     }
     
     .swiper-slide .slider-text {
-      margin: auto;
-      left: 0;
-      right: 0;
-      top: 70px;
-      width: 91vw;
-     }
-     
-     
+        margin: auto;
+        width: 91vw;
+        display: grid;
+        justify-content: center;
+        grid-auto-rows: max-content;
+    }
+    
     .swiper-slide .slider-text a{
         font-size: 15px;
+        height: max-content;
+        width: max-content;
     }
     
     .swiper-slide:nth-child(1) .slider-text h3{
@@ -2708,16 +2709,19 @@ input::placeholder {
         justify-self: center;
         left: 10px;
         position: relative;
-     }
-     
-     
+    }
+    
+    .mySwiper {
+        height: calc(60vh - 120px);
+    }
+
+    .swiper-slide .slider-text h1 {
+        font-size: 29px;
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 400px) {
-    
-    .swiper-slide .slider-text {
-    top: 25px;
-    }
     
     .swiper-slide .slider-text h1{
         font-size: 28px;
@@ -2752,7 +2756,6 @@ input::placeholder {
     .reach-out .reach-out-parent h1{
         font-size: 25px;
     }
-
     
     .reach-out .reach-out-parent .child-2 form .form-btn{
         font-size: 14px;
@@ -2763,89 +2766,77 @@ input::placeholder {
         padding-left: 50px;
     }
 
-
-    .mySwiper {
-        height: calc(60vh - 120px);
-    }
-
-
     .swiper-slide .slider-text a{
         padding: 8px 18px;
         /*font-size: 12px;*/
     }
 
+    .track-your-order input {
+        width: 223px;
+        height: 2rem;
+        font-size: 9.7px;
+        background-position: 7px 5px;
+    }
 
-
-.track-your-order input {
-    width: 223px;
-    height: 2rem;
+    .track-your-order button {
     font-size: 9.7px;
-    background-position: 7px 5px;
-}
+    padding: 6px 9px;
+    }
 
-.track-your-order button {
-font-size: 9.7px;
-padding: 6px 9px;
-}
+    .homepage-services {
+        margin-block: 8px;
+    }
 
-.homepage-services {
-    margin-block: 8px;
-}
+    .homepage-services h1 {
+        font-size: 24px;
+    }
 
-.homepage-services h1 {
-    font-size: 24px;
-}
+    .service-cards .icon-1 {
+        width: 40px;
+    }
 
-.service-cards .icon-1 {
-    width: 40px;
-}
+    .service-cards .text-wrapper {
+        font-size: 18px !important;
+        padding-bottom: 2px;
+    }
 
-.service-cards .text-wrapper {
-    font-size: 18px !important;
-    padding-bottom: 2px;
-}
+    .service-cards p{
+        font-size: 17.5px !important;
+    }
 
-.service-cards p{
-    font-size: 17.5px !important;
-}
-
-.homepage-services .service-cards div{
-    gap: 0;
-    background: #dad7d7;
-    padding: 10px;
-}
+    .homepage-services .service-cards div{
+        gap: 0;
+        background: #dad7d7;
+        padding: 10px;
+    }
 
 
-.location-image .child-1 h1{
-    font-size: 18px;
-}
+    .location-image .child-1 h1{
+        font-size: 18px;
+    }
 
-.location-image .child-1 h4 {
-    font-size: 18px;
-}
+    .location-image .child-1 h4 {
+        font-size: 18px;
+    }
 
-.location-image .child-1 h6{
-    font-size: 19px;
-}
+    .location-image .child-1 h6{
+        font-size: 19px;
+    }
 
-.location-container .child-2 {
-    font-size: 14px;
-}
-
-
-.location-image .child-4 a {
-    font-size: 15px;
-}
-
-.our-sermons-cards-container {
-    border-radius: 30px;
-    margin-bottom: 40px;
-}
+    .location-container .child-2 {
+        font-size: 14px;
+    }
 
 
-    
-    
-    
+    .location-image .child-4 a {
+        font-size: 15px;
+    }
+
+    .our-sermons-cards-container {
+        border-radius: 30px;
+        margin-bottom: 40px;
+    }
+
     .reach-out .reach-out-parent .child-2 h5,
     .reach-out .reach-out-parent .child-2 h2,
     .reach-out .reach-out-parent .child-2 p{
@@ -2855,14 +2846,10 @@ padding: 6px 9px;
     .testimonials{
         justify-content: center;
     }
-    
-    
-    
+
     .testimonials .testimonials-header h1{
         width: 85%;
     }
-    
-    
     
     .swiper-slide-testimonial .test-card-footer span:nth-child(1) img {
         width: 12px;
@@ -2882,8 +2869,6 @@ padding: 6px 9px;
     margin: auto;
     margin-bottom: 100px;
     }
-    
-
     
     .faq-section .faq-content {
         padding-left: 0;
