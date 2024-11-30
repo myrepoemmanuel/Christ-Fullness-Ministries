@@ -435,11 +435,17 @@ body{
 
 
 .menu{
-    position:relative; 
+    position:relative;
+    display: grid;
+    align-items: center;
     left: 45vw; 
-    font-size:35px;
     cursor:pointer;
     color:white;
+}
+
+.menu img{
+    width: 40px;
+    height: 40px;
 }
 
 /* The Overlay (background) */
@@ -1356,6 +1362,7 @@ input::placeholder {
     position: absolute; 
     width: 90px;
     height: 90px;
+    filter: invert(100%);
 }
 
 
@@ -1537,7 +1544,6 @@ input::placeholder {
     object-fit: cover;
     z-index: 1;
     background: linear-gradient(90deg,#333333 0%,#000000 100%); 
-    opacity: 0.8;
     filter: brightness(0.4)
 }
 
@@ -1671,13 +1677,6 @@ input::placeholder {
     background: transparent;
     border: 1.5px #ffffff solid;
     color: white;
-    padding-left: 12px;
-}
-
-
-
-
-.reach-out .reach-out-parent .child-2 form div:nth-child(4) input{
     padding-left: 12px;
 }
 
@@ -2363,7 +2362,7 @@ input::placeholder {
     }
 
     .reach-out .reach-out-parent .child-2 h5{
-        width: 100%;
+        width: 80vw;
     }
 
     .reach-out .reach-out-parent .child-2 .sect-1{
@@ -2545,10 +2544,6 @@ input::placeholder {
         width: 100%;
     }
     
-    .reach-out .reach-out-parent .hider-dark {
-      filter: blur(2px) brightness(0.2);
-    }
-    
     .our-sermons .service-cards div{
         margin-bottom: 7px;
     }
@@ -2719,6 +2714,25 @@ input::placeholder {
         font-size: 29px;
         width: 100%;
     }
+
+    .main_nav .logo {
+        gap: 0;
+        left: 135px;
+    }
+
+    .main_nav .logo .logo-text{
+        font-size: 12px !important;
+        padding-left: 8px;
+    }
+
+    .main_nav .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu{
+        left: -30vw;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -2759,7 +2773,7 @@ input::placeholder {
     
     .reach-out .reach-out-parent .child-2 form .form-btn{
         font-size: 14px;
-        padding: 2px 10px;
+        padding: 10px 10px;
     }
 
     .faq-section .faq-content{
@@ -4570,16 +4584,12 @@ input::placeholder {
       align-self: center;
     }
     .reach-out .reach-out-parent h4{
-      width: max-content;
-      display: grid;
-      align-items: center;
-      padding: 7px 16px;
-      text-align: center;
+        width: max-content;
+        display: grid;
+        align-items: center;
+        text-align: center;
     }
     
-    .reach-out .reach-out-parent .child-2{
-        padding-top: 10px;
-    }
 }
 
 @media only screen and (max-width: 370px) {    
